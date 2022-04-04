@@ -80,8 +80,8 @@ const thumb = fs.readFileSync ('./media/dogetb.jpg')
 
 //══════════[ Developer Number ]══════════//
 
-developerNo = '916909137213'
-developerName= '🦄Dream Guy Xeon'
+developerNo = '34613110267'
+developerName= 'العم جيرايا 💙'
 
 //══════════[ Apikeys ]══════════//
 //----credit goes to all the respected owner---//
@@ -546,7 +546,7 @@ if (!isGroup) return
 if (!isAntiVirtex) return
 if (isGroupAdmins) return
 reply('Mark as read\n'.repeat(300))
-reply(`「 *VIRUS DETECTED* 」\n\nYou sent a virtex, sorry you will be kicked from the group`)
+reply(`「 *VIRUS DETECTED* 」\n\nيخوي قلنا بدون روابط🗿.`)
 console.log(color('[KICK]', 'red'), color('Received a text virus!', 'yellow'))
 DogeXeonOP.groupRemove(from, [sender])
 }     
@@ -656,12 +656,12 @@ rows: [
 "rowId": `${prefix}randomvideo`
 },
 {
-"title": "AESTHETIC GIRL MENU",
+"title": "AESTHETIC GIRL MENU (ممنوع)",
 "description": `Display A List Of 18+ Intake Features`,
 "rowId": `${prefix}asupanmenu`
 },
 {
-"title": "RANDOM GIRL MENU",
+"title": "RANDOM GIRL MENU (ممنوع)",
 "description": `Display A List Of Random Girl Features`,
 "rowId": `${prefix}cecanmenu`
 },
@@ -671,7 +671,7 @@ rows: [
 "rowId": `${prefix}animemenu`
 },
 {
-"title": "NSFW/HENTAI MENU",
+"title": "NSFW/HENTAI MENU (ممنوع)",
 "description": `Display A List Of Nsfw 18+ Features`,
 "rowId": `${prefix}nsfwmenu`
 },
@@ -1459,16 +1459,16 @@ menu =
 `*${ucapanWaktu} @${senderr.split('@')[0]}*
 
 \`\`\`OPEN FOR RENT :\`\`\`
-➪ *1 Week :* _100INR_
-➪ *1 Month :* _200INR_
-➪ *Permanent :* _550INR_
+➪ *1 Week :* _ما في_
+➪ *1 Month :* _ما في_
+➪ *Permanent :* _ما في_
 
 \`\`\`OPEN FOR STUDENTS :\`\`\`
-➪ *Ordinary student :* _500INR_
-➪ *Premium student :* _1000INR_
+➪ *Ordinary student :* _ما في_
+➪ *Premium student :* _ما في_
 
 \`\`\`OPEN FOR SC :\`\`\`
-➪ *Wanna buy this script? :* _Price: ₹250 (India)_
+➪ *Wanna buy this script? :* _Price: 10$_
 
 For those who want to buy script or interested in any of the above
 Can request, if interested please contact the developer`
@@ -2843,7 +2843,7 @@ vcard2 = 'BEGIN:VCARD\n'
 DogeXeonOP.sendMessage(from, {displayName: `The owner ${botname}`, vcard: vcard2}, contact, 
 { quoted: fgi, 
 })
-reply(`_The above contact is my owner 🐶🦄_`)
+reply(`_كلمني فوق 🐧_`)
 break
 case 'developer':
 
@@ -2868,7 +2868,7 @@ case 'script':
 case 'sourcode':
 
 scpic = fs.readFileSync('./media/scpic.jpg')
-scsell = `*🐶𝗗𝗼𝗴𝗲 𝗕𝗼𝘁 𝗩𝟯 𝗦𝗰𝗿𝗶𝗽𝘁🐶*\n\n_• 𝒀𝒐𝒖𝑻𝒖𝒃𝒆: https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A_\n_• 𝑮𝒊𝒕𝑯𝒖𝒃: https://github.com/DGXeon/DogeBot3_\n\n_𝙄𝙛 𝙮𝙤𝙪 𝙬𝙞𝙨𝙝 𝙩𝙤 𝙗𝙪𝙮 𝙪𝙣𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 𝙘𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙮 𝙨𝙘𝙧𝙞𝙥𝙩 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬._`
+scsell = `*Jiraya Bot*\n\n_• GROUP: https://chat.whatsapp.com/KYPAGRbWwjPHDNiDg1JYRS_\n_• My Nuber: http://wa.me/+34613110267_\n\n_شسمه اذا تبي البوت كلمني 🐧._`
 but = [
 { buttonId: `${prefix}rentbot`, buttonText: { displayText: 'BUY SCRIPT 💵' }, type: 1 },
 { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }
@@ -3167,13 +3167,13 @@ case 'ninjaname':
 if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Naruto*`)  
 F = body.slice(11)
 anunname = await fetchJson(`https://docs-jojo.herokuapp.com/api/ninja_name?name=${F}`)
-anu189 = `🐶 *NAME* : ${anunname.your_name}\n`
-anu000 = `🐶 *NINJA* : ${anu189.result}\n`
+anu189 = `🐧 *NAME* : ${anunname.your_name}\n`
+anu000 = `🐧 *NINJA* : ${anu189.result}\n`
 reply(anu000)
 break
 case 'stylishcoolname':
 anuscn = await fetchJson(`https://leyscoders-api.herokuapp.com/api/nick-epep?apikey=${Leyscoders}`)
-reply(`*🐶HERE IS YOUR RANDOM STYLISH NAME🐶*\n\n${anuscn.result}`)
+reply(`*🐧HERE IS YOUR RANDOM STYLISH NAME🐧*\n\n${anuscn.result}`)
 break
 case 'ssweb':
 case 'ss':
@@ -4630,7 +4630,7 @@ members_id = []
 teks = (args.length > 1) ? args.join(' ').trim() : ''
 teks += '\n\n'
 for (let mem of groupMembers) {
-teks += `• @${mem.jid.split('@')[0]}\n`
+teks += `💠 @${mem.jid.split('@')[0]}\n`
 members_id.push(mem.jid)
 }
 mentions(teks, members_id, true)
