@@ -586,48 +586,48 @@ pemilik = `${owner}@s.whatsapp.net`
 menu =
 `*_${ucapanWaktu} @${senderr.split('@')[0]}_*
 
-❏「 TIME 」
-${gaya1} *Date* : ${tanggal}
-${gaya1} *Time* : ${time}
+❏「 الوقت 」
+${gaya1} *تاريخ* : ${tanggal}
+${gaya1} *ساعة* : ${time}
 
-❏「 INFO BOT 」
-${gaya1} *Speed* : ${latensie.toFixed(4)} Second
-${gaya1} *Runtime* : ${runtime(process.uptime())}
-${gaya1} *Bot Name* : ${botname}
-${gaya1} *Owner Name* : ${ownername}
-${gaya1} *Owner Number* : @${pemilik.split('@')[0]}
-${gaya1} *Host Name :* ${os.hostname()}
-${gaya1} *Platform :* ${os.platform()}
-${gaya1} *Wa Version :* ${DogeXeonOP.user.phone.wa_version}
-${gaya1} *Mode :* ${self ? "Self" : "Public"}
-${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
-${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
-${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
+❏「 معلومات البوت 」
+${gaya1} *السرعه* : ${latensie.toFixed(4)} Second
+${gaya1} *مدة العرض* : ${runtime(process.uptime())}
+${gaya1} *اسم البوت* : ${botname}
+${gaya1} *اسم المطور* : ${ownername}
+${gaya1} *رقم المطور* : @${pemilik.split('@')[0]}
+${gaya1} *اسم المضيف :* ${os.hostname()}
+${gaya1} *برنامج :* ${os.platform()}
+${gaya1} *نسخة :* ${DogeXeonOP.user.phone.wa_version}
+${gaya1} *مود :* ${self ? "Self" : "Public"}
+${gaya1} *القراءة التلقائية* : ${autoread ? "Active" : "Off"}
+${gaya1} *نوع متشابه* : ${autoketik ? "Active" : "Off"}
+${gaya1} *أوتوفن* : ${autovn ? "Active" : "Off"}
 
-❏「 USER INFO 」
-${gaya1} *Name* : ${pushname}
-${gaya1} *Bio* : ${bio_user}
-${gaya1} *Number* : @${senderr.split('@')[0]}
-${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
+❏「 معلومات المستخدم 」
+${gaya1} *الاسم* : ${pushname}
+${gaya1} *البايو* : ${bio_user}
+${gaya1} *الرقم* : @${senderr.split('@')[0]}
+${gaya1} *حالة* : ${isOwner ? 'Owner' : 'User'}`
 teks =
-`_Please Select Button Below_
-_If You Are A Mod User_
-_Please Type ${prefix}command_`
+`_سلام عليكم_
+_بوت جيرايا الافضل_
+_اتمنى ${prefix}افيدكم_`
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
 
 listMsg = {
-buttonText: 'MENU 📃',
+buttonText: 'الاوامر 📃',
 footerText: `*${botname}*`,
-description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
+description: `مرحبا صديقي @${senderr.split('@')[0]}, اضغط على الاوامر`,
 sections: [
 {
 "title": `${tanggal} - ${time}`,
 rows: [
 {
-"title": "GROUP MENU",
-"description": `Display A List Of Group Features`,
+"title": "قائمة المجموعة",
+"description": `عرض اوامر المجموعة (للمشرفين)`,
 "rowId": `${prefix}grupmenu`
 },
 {
