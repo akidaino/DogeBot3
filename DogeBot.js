@@ -613,7 +613,7 @@ teks =
 `_سلام عليكم_
 _بوت جيرايا الافضل_
 _اتمنى ${prefix}افيدكم_`
-DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'جيرايا 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'المطور 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
 
@@ -1436,21 +1436,11 @@ case 'rentbot':
 menu =
 `*${ucapanWaktu} @${senderr.split('@')[0]}*
 
-\`\`\`OPEN FOR RENT :\`\`\`
-➪ *1 Week :* _ما في_
-➪ *1 Month :* _ما في_
-➪ *Permanent :* _ما في_
+\`\`\`رابط قروبي :\`\`\`
+➪ https://chat.whatsapp.com/KYPAGRbWwjPHDNiDg1JYRS
 
-\`\`\`OPEN FOR STUDENTS :\`\`\`
-➪ *Ordinary student :* _ما في_
-➪ *Premium student :* _ما في_
-
-\`\`\`OPEN FOR SC :\`\`\`
-➪ *Wanna buy this script? :* _Price: 10$_
-
-For those who want to buy script or interested in any of the above
-Can request, if interested please contact the developer`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal} - ${time}_*`, buttons: [{ buttonId: `${prefix}payment`, buttonText: { displayText: 'PAYMENT 💸' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr]}}}, 'buttonsMessage')
+💠ذا رابط قروب انمي وكذا ... فيك تدخل استقبال وتختار لقب ومرحب بالكل 💙`
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal} - ${time}_*`, buttons: [{ buttonId: `${prefix}payment`, buttonText: { displayText: 'PAYMENT 💸' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: '👨🏼‍💻 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr]}}}, 'buttonsMessage')
 break
 case 'bayar':
 case 'payment':
@@ -2832,7 +2822,7 @@ members_ids.push(mem.jid)
 vcard2 = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
 + `FN:${developerName}\n`
-+ `ORG: Developer Of Doge Bot ;\n`
++ `ORG: Developer Of Jiraya Bot ;\n`
 + `TEL;type=CELL;type=VOICE;waid=${developerNo}:${developerNo}\n`
 + 'END:VCARD'.trim()
 DogeXeonOP.sendMessage(from, {displayName: `The owner ${botname}`, vcard: vcard2}, contact, 
@@ -2846,10 +2836,10 @@ case 'script':
 case 'sourcode':
 
 scpic = fs.readFileSync('./media/scpic.jpg')
-scsell = `*Jiraya Bot*\n\n_• GROUP: https://chat.whatsapp.com/KYPAGRbWwjPHDNiDg1JYRS_\n_• My Nuber: http://wa.me/+34613110267_\n\n_شسمه اذا تبي البوت كلمني 🐧._`
+scsell = `*سلام عليكم*\n\n_• My Nuber: http://wa.me/+34613110267_\n\n_شسمه اذا تبي البوت كلمني 🐧._`
 but = [
-{ buttonId: `${prefix}rentbot`, buttonText: { displayText: 'BUY SCRIPT 💵' }, type: 1 },
-{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }
+{ buttonId: `${prefix}rentbot`, buttonText: { displayText: 'قروبي' }, type: 1 },
+{ buttonId: `${prefix}developer`, buttonText: { displayText: '👨🏼‍💻 المطور' }, type: 1 }
 ]
 sendButImage(from, scsell, `*_${tanggal} - ${time}_*`, scpic, but)
 break
