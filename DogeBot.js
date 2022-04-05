@@ -613,7 +613,7 @@ teks =
 `_سلام عليكم_
 _بوت جيرايا الافضل_
 _اتمنى ${prefix}افيدكم_`
-DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'جيرايا 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'المطور 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'الاوامر 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'جيرايا 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'المطور 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
 
@@ -1440,16 +1440,15 @@ menu =
 ➪ https://chat.whatsapp.com/KYPAGRbWwjPHDNiDg1JYRS
 
 💠ذا رابط قروب انمي وكذا ... فيك تدخل استقبال وتختار لقب ومرحب بالكل 💙`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal} - ${time}_*`, buttons: [{ buttonId: `${prefix}payment`, buttonText: { displayText: 'PAYMENT 💸' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: '👨🏼‍💻 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal} - ${time}_*`, buttons: [{ buttonId: `${prefix}payment`, buttonText: { displayText: 'شراء' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: '👨🏼‍💻 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr]}}}, 'buttonsMessage')
 break
 case 'bayar':
 case 'payment':
 
 gambar = fs.readFileSync('./media/doged.jpg')
-menunya = `*「 PAYMENT 」*
+menunya = `*「 سلام عليكم 」*
 
-• شسمه: كام مطوري اذا تبي البوت
-• الرقم : _http://wa.me/+34613110267_`
+• شسمه : _غير متاح للشراء حالية 🐧_`
 but = [
 { buttonId: `${prefix}menu`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },
 { buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 }
@@ -2836,7 +2835,7 @@ case 'script':
 case 'sourcode':
 
 scpic = fs.readFileSync('./media/scpic.jpg')
-scsell = `*سلام عليكم*\n\n_• My Nuber: http://wa.me/+34613110267_\n\n_شسمه اذا تبي البوت كلمني 🐧._`
+scsell = `*سلام عليكم*\n\n_• My Number: http://wa.me/+34613110267_\n\n_شسمه اذا تبي البوت كلمني 🐧._`
 but = [
 { buttonId: `${prefix}rentbot`, buttonText: { displayText: 'قروبي' }, type: 1 },
 { buttonId: `${prefix}developer`, buttonText: { displayText: '👨🏼‍💻 المطور' }, type: 1 }
