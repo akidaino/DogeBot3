@@ -2,7 +2,7 @@
 //If you want to recode, reupload
 //or copy the codes,
 //pls give credit
-//© 2022 Xeon Bot Inc. Doge Bot 
+//© 2022 Jiraya Bot Inc. Jiraya Bot 
 //Thank you to Lord Buddha, Family and Myself
 //═══════════════════════════════════════════════════════//
 const
@@ -429,7 +429,7 @@ return crypto.randomBytes(size).toString('hex').slice(0, size)
 
 //══════════[ Grup ]══════════//
 
-const hideTag = async function(from, text){
+const hidetag = async function(from, text){
 let anugroupsend = await DogeXeonOP.groupMetadata(from)
 let members = anugroupsend.participants
 let ane = []
@@ -438,7 +438,7 @@ ane.push(i.jid)
 }
 DogeXeonOP.sendMessage(from, {text:text, jpegThumbnail:fs.readFileSync('media/dogepic1.jpg')}, 'extendedTextMessage', {contextInfo: {"mentionedJid": ane}})
 }
-const hideTagKontak = async function(from, nomor, nama){
+const hidetagKontak = async function(from, nomor, nama){
 let vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + 'ORG:Kontak\n' + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
 let anuvcardoke = await DogeXeonOP.groupMetadata(from)
 let members = anuvcardoke.participants
@@ -535,7 +535,7 @@ if (!isGroup) return
 if (!isAntiLink) return
 if (isGroupAdmins) return
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-reply(` *「 GROUP LINK DETECTED 」*\nيخوي قلنا بدون روابط🗿.`)
+reply(` *「 تم اكتشاف رابط خارجي 🐧 !!! 」*\nيخوي قلنا بدون روابط🗿.`)
 setTimeout(() => {
 DogeXeonOP.groupRemove(from, [kic]).catch((e) => { reply(`يجب على البوت ان يكون مشرفا`) })
 }, 0)
@@ -546,7 +546,7 @@ if (!isGroup) return
 if (!isAntiVirtex) return
 if (isGroupAdmins) return
 reply('Mark as read\n'.repeat(300))
-reply(`「 *VIRUS DETECTED* 」\n\nيخوي قلنا بدون روابط🗿.`)
+reply(`「 *تم اكتشاف فيروس 🐧 !!!* 」\n\nترقب رقمك 😍.`)
 console.log(color('[KICK]', 'red'), color('Received a text virus!', 'yellow'))
 DogeXeonOP.groupRemove(from, [sender])
 }     
@@ -613,7 +613,7 @@ teks =
 `_سلام عليكم_
 _بوت جيرايا الافضل_
 _اتمنى ${prefix}افيدكم_`
-DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
 
@@ -656,24 +656,9 @@ rows: [
 "rowId": `${prefix}randomvideo`
 },
 {
-"title": "محذوف (ممنوع)",
-"description": `Display A List Of 18+ Intake Features`,
-"rowId": `${prefix}asupanmenu`
-},
-{
-"title": "محذوف (ممنوع)",
-"description": `Display A List Of Random Girl Features`,
-"rowId": `${prefix}cecanmenu`
-},
-{
 "title": "قائمة الانمي",
 "description": `اوامر الانمي قيد الانشاء`,
 "rowId": `${prefix}animemenu`
-},
-{
-"title": "محذوف (ممنوع)",
-"description": `Display A List Of Nsfw 18+ Features`,
-"rowId": `${prefix}nsfwmenu`
 },
 {
 "title": "قائمة الملصقات",
@@ -739,7 +724,7 @@ case 'grupmenu':
 case 'groupmenu':
 
 menu =
-`*「 GROUP MENU 」*
+`*「 قائمة المجموعة 」*
 
 ${gaya2} ${prefix}antilink _on / off_
 ${gaya2} ${prefix}antivirtex _on / off_
@@ -749,7 +734,7 @@ ${gaya2} ${prefix}group _open / closed_
 ${gaya2} ${prefix}promote _@tag / reply_
 ${gaya2} ${prefix}demote _@tag / reply_
 ${gaya2} ${prefix}add _916xx_
-${gaya2} ${prefix}kick _@tag / reply_
+${gaya2} ${prefix}طرد _@tag / reply_
 ${gaya2} ${prefix}getdesc
 ${gaya2} ${prefix}setpp _reply_
 ${gaya2} ${prefix}setdesc _text_
@@ -758,7 +743,7 @@ ${gaya2} ${prefix}getbio _reply target_
 ${gaya2} ${prefix}getdp _tag_
 ${gaya2} ${prefix}getname _reply target_
 ${gaya2} ${prefix}منشن
-${gaya2} ${prefix}hidetag _text_
+${gaya2} ${prefix}فعالية _text_
 ${gaya2} ${prefix}contact _916x|Name_
 ${gaya2} ${prefix}contag _@tag|Name_
 ${gaya2} ${prefix}sticktag _Reply Sticker_
@@ -767,18 +752,18 @@ ${gaya2} ${prefix}creategroup _Name|tag_
 ${gaya2} ${prefix}promoteall
 ${gaya2} ${prefix}demoteall
 ${gaya2} ${prefix}listadmin
-${gaya2} ${prefix}leave
+${gaya2} ${prefix}اطلع
 ${gaya2} ${prefix}grupowner
 ${gaya2} ${prefix}groupinfo
 ${gaya2} ${prefix}grouplink
 ${gaya2} ${prefix}onlinelist
 ${gaya2} ${prefix}resetgrouplink`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
 
 menu =
-`*「 DOWNLOAD MENU 」*
+`*「 قائمة التحميل 」*
 
 ${gaya2} ${prefix}mediafire _Link_
 ${gaya2} ${prefix}soundcloud _Link_
@@ -795,12 +780,12 @@ ${gaya2} ${prefix}instagram _video link_
 ${gaya2} ${prefix}herodetail _hero name_
 ${gaya2} ${prefix}herolist
 ${gaya2} ${prefix}lyrics _song name_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'makermenu':
 
 menu =
-`*「 MAKER MENU 」*
+`*「 قائمة الانشاء 」*
 
 ${gaya2} ${prefix}freefire _text_
 ${gaya2} ${prefix}silverplaybutton _text_
@@ -944,21 +929,21 @@ ${gaya2} ${prefix}makerkaneki _Text1&Text2_
 ${gaya2} ${prefix}rem _Text1&Text2_
 ${gaya2} ${prefix}lolimaker _Text1&Text2_
 ${gaya2} ${prefix}gura _Text1&Text2_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'gamemenu':
 
 menu =
-`*「 GAME 」*
+`*「 قائمة الالعاب 」*
 
 ${gaya2} ${prefix}truth
 ${gaya2} ${prefix}dare`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randomimage':
 
 menu =
-`*「 RANDOM IMAGE MENU 」*
+`*「 قائمة الصور العشوائية 」*
 
 ${gaya2} ${prefix}ppcouple
 ${gaya2} ${prefix}meme
@@ -989,12 +974,12 @@ ${gaya2} ${prefix}wallpaperhp2
 ${gaya2} ${prefix}wallpaperkpop
 ${gaya2} ${prefix}wallpaperblackpink
 ${gaya2} ${prefix}wallpapergame`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randomvideo':
 
 menu =
-`*「 RANDOM VIDEO MENU 」*
+`*「 قائمة الفيديوهات العشوائية 」*
 
 ${gaya2} ${prefix}beatvn
 ${gaya2} ${prefix}jedagjedugff
@@ -1005,7 +990,7 @@ ${gaya2} ${prefix}storygalau
 ${gaya2} ${prefix}storytruk
 ${gaya2} ${prefix}storybus
 ${gaya2} ${prefix}storyanime`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}abcde`, buttonText: { displayText: '\n\nAKU ADALAH GAY' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}abcde`, buttonText: { displayText: '\n\nAKU ADALAH GAY' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'asupanmenu':
 
@@ -1021,7 +1006,7 @@ ${gaya2} ${prefix}santuy
 ${gaya2} ${prefix}ukhty
 ${gaya2} ${prefix}gheayubi
 ${gaya2} ${prefix}nantalia`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'cecanmenu':
 
@@ -1045,12 +1030,12 @@ ${gaya2} ${prefix}indonesia
 ${gaya2} ${prefix}korea
 ${gaya2} ${prefix}japan
 ${gaya2} ${prefix}malaysia`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'animemenu':
 
 menu =
-`*「 ANIME 」*
+`*「 قائمة الانمي 」*
 
 ${gaya2} ${prefix}elf
 ${gaya2} ${prefix}shinobu
@@ -1115,7 +1100,7 @@ ${gaya2} ${prefix}yuki
 ${gaya2} ${prefix}yumeko
 ${gaya2} ${prefix}fanart
 ${gaya2} ${prefix}nino`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'nsfwmenu':
 
@@ -1191,12 +1176,12 @@ ${gaya2} ${prefix}pussy
 ${gaya2} ${prefix}thighs
 ${gaya2} ${prefix}yuri
 ${gaya2} ${prefix}bokep`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'stickermenu':
 
 menu =
-`*「 STICKER MENU 」*
+`*「 قائمة الملصقات 」*
 
 ${gaya2} ${prefix}stickerwm _Author|Package_
 ${gaya2} ${prefix}take _Author|Package_
@@ -1210,12 +1195,12 @@ ${gaya2} ${prefix}semoji _Emoji_
 ${gaya2} ${prefix}stcmemepic _Up Txt|Down Txt_
 ${gaya2} ${prefix}stcmeme _Up Txt|Down Txt_
 ${gaya2} ${prefix}memegenerator _Text_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'funmenu':
 
 menu =
-`*「 FUN MENU 」*
+`*「 قائمة المزح 」*
 
 ${gaya2} ${prefix}ship _tag/tag_
 ${gaya2} ${prefix}rate _reply_
@@ -1227,12 +1212,9 @@ ${gaya2} ${prefix}foolish
 ${gaya2} ${prefix}smart
 ${gaya2} ${prefix}handsome
 ${gaya2} ${prefix}beautiful
-${gaya2} ${prefix}gay
-${gaya2} ${prefix}lesbi
 ${gaya2} ${prefix}bastard
 ${gaya2} ${prefix}stubble
 ${gaya2} ${prefix}dog
-${gaya2} ${prefix}fuck
 ${gaya2} ${prefix}ugly
 ${gaya2} ${prefix}ape
 ${gaya2} ${prefix}cute
@@ -1243,17 +1225,13 @@ ${gaya2} ${prefix}horny
 ${gaya2} ${prefix}wibu
 ${gaya2} ${prefix}asshole
 ${gaya2} ${prefix}couple
-${gaya2} ${prefix}handsomecheck [tag]
-${gaya2} ${prefix}beautycheck [tag]
-${gaya2} ${prefix}gaycheck [tag]
-${gaya2} ${prefix}lesbiancheck [tag]
 ${gaya2} ${prefix}charactercheck [tag]`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'soundmenu':
 
 menu =
-`*「 SOUND MENU 」*
+`*「 قائمة الصوت 」*
 ${gaya2} ${prefix}sound1
 ${gaya2} ${prefix}sound2
 ${gaya2} ${prefix}sound3
@@ -1328,22 +1306,22 @@ ${gaya2} ${prefix}sound71
 ${gaya2} ${prefix}sound72
 ${gaya2} ${prefix}sound73
 ${gaya2} ${prefix}sound74`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'ocrmenu':
 
 menu =
-`*「 OCR MENU 」*
+`*「 قائمة OCR 」*
 
 ${gaya2} ${prefix}ninjaname _Name_
 ${gaya2} ${prefix}stylishcoolname
 ${gaya2} ${prefix}ssweb _URL_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'convertmenu':
 
 menu =
-`*「 CONVERT MENU 」*
+`*「 قائمة التحويل 」*
 
 ${gaya2} ${prefix}cutesound _reply audio/vn_
 ${gaya2} ${prefix}blub _reply audio/vn_
@@ -1363,33 +1341,33 @@ ${gaya2} ${prefix}tomp3 _reply video_
 ${gaya2} ${prefix}toimg _reply sticker_
 ${gaya2} ${prefix}tourl _reply image/vid_
 ${gaya2} ${prefix}tts _code text_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'levelingmenu':
 
 menu =
-`*「 LEVELING MENU 」*
+`*「 قائمة المستوى 」*
 
 ${gaya2} ${prefix}profile
 ${gaya2} ${prefix}level`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'searchmenu':
 
 menu =
-`*「 SEARCH MENU 」*
+`*「 قائمة البحث 」*
 
 ${gaya2} ${prefix}playstore _Query_
 ${gaya2} ${prefix}ytsearch _Query_
 ${gaya2} ${prefix}pinterest _Query_
 ${gaya2} ${prefix}googleimg _Query_
 ${gaya2} ${prefix}google _Query_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'apkmenu':
 
 menu =
-`*「 APK MENU 」*
+`*「 قائمة التطبيقات 」*
 
 ${gaya2} ${prefix}apkdone _Apk Name_
 ${gaya2} ${prefix}apkgoogle _Apk Name_
@@ -1399,12 +1377,12 @@ ${gaya2} ${prefix}toraccino _Apk Name_
 ${gaya2} ${prefix}uapkpro _Apk Name_
 ${gaya2} ${prefix}apkmody _Apk Name_
 ${gaya2} ${prefix}apkshub _Apk Name_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'othermenu':
 
 menu =
-`*「 OTHER MENU 」*
+`*「 قائمة اوامر اخرى 」*
 
 ${gaya2} ${prefix}runtime
 ${gaya2} ${prefix}speed
@@ -1414,12 +1392,12 @@ ${gaya2} ${prefix}owner
 ${gaya2} ${prefix}developer
 ${gaya2} ${prefix}script
 ${gaya2} ${prefix}delete _Reply to bot messages_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'ownermenu':
 
 menu =
-`*「 OWNER MENU 」*
+`*「 قائمة المطور 」*
 
 ${gaya2} ${prefix}spam _text|amount_
 ${gaya2} ${prefix}tospam _reply with amount_
@@ -1445,7 +1423,7 @@ ${gaya2} ${prefix}clearall
 ${gaya2} ${prefix}leaveall
 ${gaya2} ${prefix}public
 ${gaya2} ${prefix}self`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'abcde':
 
@@ -1480,11 +1458,11 @@ case 'payment':
 gambar = fs.readFileSync('./media/doged.jpg')
 menunya = `*「 PAYMENT 」*
 
-• Note: Talk to the owner before payment
-• FamPay : _Please scan the qr above_`
+• شسمه: كام مطوري اذا تبي البوت
+• الرقم : _http://wa.me/+34613110267_`
 but = [
-{ buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },
-{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }
+{ buttonId: `${prefix}menu`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },
+{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 }
 ]
 sendButImage(from, menunya, `*_${tanggal} - ${time}_*`, gambar, but)
 break
@@ -1536,7 +1514,7 @@ Please Choose Whether Document, Audio or Video Below`
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
-        result = `In process...`
+        result = `جاري التحميل...`
         reply(result)
         sendFileFromUrl(res[0].link, document, { mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
         break
@@ -1545,7 +1523,7 @@ Please Choose Whether Document, Audio or Video Below`
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
-        result = `In process...`
+        result = `جاري التحميل...`
         reply(result)
         sendFileFromUrl(res[0].link, video, { quoted: mek, mimetype: 'video/mp4', filename: res[0].output })
         break
@@ -1732,7 +1710,7 @@ reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🐶` })
+DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video�` })
 break
 case 'mp3':
 reply(mess.wait)
@@ -1781,7 +1759,7 @@ sendButVideo(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -1796,7 +1774,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -1833,7 +1811,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -1869,7 +1847,7 @@ sendButMessage(from, dhani, `Click To Go To Next ${command}`, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },]);
@@ -1878,11 +1856,11 @@ case 'quotes':
 
 anuquotes = await fetchJson(`https://apidhani.herokuapp.com/api/randomtext/quotes?apikey=${dhakey}`)
 dhani = (anuquotes.result.quotes)
-sendButMessage(from, dhani, `Click To Go To The Next Quotes`, [
+sendButMessage(from, dhani, `انقر للانتقال إلى الاقتباسات التالية`, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },]);
@@ -1891,11 +1869,11 @@ case 'quoteskanye':
 
 anuq = await fetchJson(`https://apidhani.herokuapp.com/api/randomtext/quotes/kanye?apikey=${dhakey}`)
 dhani = (anuq.result.text_id)
-sendButMessage(from, dhani, `Click To Go To The Next Quotes`, [
+sendButMessage(from, dhani, `انقر للانتقال إلى الاقتباسات التالية`, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },]);
@@ -1958,7 +1936,7 @@ sendButImage(from, Cowok, `*_${tanggal} - ${time}_*`, cowo, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -1969,7 +1947,7 @@ sendButImage(from, Cewek, `*_${tanggal} - ${time}_*`, cewe, [
 {
 buttonId: `${prefix + command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -1980,12 +1958,12 @@ case 'meme':
 reply(mess.wait)
 anumeme = await fetchJson(`https://apidhani.herokuapp.com/api/randomimage/meme?apikey=${dhakey}`)
 buffer = await getBuffer(anumeme.result.url)
-Teks = `Click Next To Go The Next ${command}`
+Teks = `انقر فوق التالي  ${command}`
 sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [                      
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2004,12 +1982,12 @@ case 'wallpapergame':
 
 reply(mess.wait)
 buffer = await getBuffer(`https://apidhani.herokuapp.com/api/randomimage/${command}?apikey=${dhakey}`)
-Teks = `Click Next To Go To The Next ${command}`
+Teks = `انقر فوق التالي  ${command}`
 sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [                      
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2040,7 +2018,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2058,7 +2036,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2147,7 +2125,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2171,7 +2149,7 @@ break
                  randIndex = Math.floor(Math.random() * jsonData.length);
                  randKey = jsonData[randIndex];
                  highschooldxd = await getBuffer(randKey.result)
-                 DogeXeonOP.sendMessage(from, highschooldxd, image, {quoted: mek, caption: 'Here u go!'})
+                 DogeXeonOP.sendMessage(from, highschooldxd, image, {quoted: mek, caption: '! ها أنت ذا'})
 				break
 				 case 'lovelive':
 				reply(mess.wait)
@@ -2181,7 +2159,7 @@ break
                  randIndex = Math.floor(Math.random() * jsonData.length);
                  randKey = jsonData[randIndex];
                  lovelive = await getBuffer(randKey.result)
-                 DogeXeonOP.sendMessage(from, lovelive, image, {quoted: mek, caption: 'Here u go!'})
+                 DogeXeonOP.sendMessage(from, lovelive, image, {quoted: mek, caption: '! ها أنت ذا'})
 				break
 				
 //----> NSFW FEATURES <----//
@@ -2238,7 +2216,7 @@ sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2254,7 +2232,7 @@ sendButVideo(from, pll, `*Doge Bot*`, get_result, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2343,7 +2321,7 @@ sendButVideo(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [
 {
 buttonId: `${prefix+command}`,
 buttonText: {
-displayText: `NEXT ➡️`,
+displayText: `⬅️ التالي`,
 },
 type: 1,
 },
@@ -2488,7 +2466,7 @@ teks = args.join(" ")
 reply(mess.wait)
 anuapidhani = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/${command}?apikey=${dhakey}&text=${teks}`)
 oke = await getBuffer(anuapidhani.result)
-DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: 'Here u go!😛'})
+DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '! ها أنت ذا😛'})
 break
 case 'hartatahta': 
 
@@ -2496,7 +2474,7 @@ if (args.length < 1) return reply(`*Wher is the text?*\n_Example : ${prefix + co
 teks = args.join(" ")
 reply(mess.wait)
 harta = await getBuffer(`https://apidhani.herokuapp.com/api/maker/harta-tahta?apikey=${dhakey}&text=${teks}`)
-DogeXeonOP.sendMessage(from, harta, image, {quoted: mek, caption: 'Here u go!😛'})
+DogeXeonOP.sendMessage(from, harta, image, {quoted: mek, caption: '! ها أنت ذا😛'})
 break
 
 //----> 2 TEXT <----//
@@ -2510,7 +2488,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anubit = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/8bit?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anubit.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'pornhub':
 
@@ -2521,7 +2499,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuphub = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/pornhub?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuphub.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'glitch':
 
@@ -2532,7 +2510,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuglitch = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/glitch?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuglitch.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'glitch2':
 
@@ -2543,7 +2521,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anug2 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/glitch2?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anug2.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'layered':
 
@@ -2554,7 +2532,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anulayered = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/layered?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anulayered.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case '3dsteel':
 
@@ -2565,7 +2543,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anu3dstl = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/3dsteel?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anu3dstl.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'realistic':
 
@@ -2576,7 +2554,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anurlstc = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/realistic?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anurlstc.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'lionlogo':
 
@@ -2587,7 +2565,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anullo = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/lionlogo?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anullo.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'ninjalogo':
 
@@ -2598,7 +2576,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anunlogo = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/ninjalogo?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anunlogo.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'wolf':
 
@@ -2609,7 +2587,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuwolf = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/logowolf?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuwolf.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'wolf2':
 
@@ -2620,7 +2598,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuw2 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/logowolf2?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuw2.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'halloween3':
 
@@ -2631,7 +2609,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuh3 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/halloween3?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuh3.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'marvel':
 
@@ -2642,7 +2620,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anumvl = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/marvelstudio?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anumvl.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'marvel2':
 
@@ -2653,7 +2631,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anumvl2 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/marvelstudio2?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anumvl2.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'cinematichorror':
 
@@ -2664,7 +2642,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anucmcr = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/cinematichorror?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anucmcr.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'avengers':
 
@@ -2675,7 +2653,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anuavgr = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/avengerslogo?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anuavgr.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'graffiti3':
 
@@ -2686,7 +2664,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anugrf3 = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/coolwallgraffiti?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anugrf3.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'captainamerica':
 
@@ -2697,7 +2675,7 @@ var F2 = F.split("&")[1];
 reply(mess.wait)
 anucaptainca = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/captainamerica?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
 pornhub = await getBuffer(anucaptainca.result)
-DogeXeonOP.sendMessage(from, pornhub, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, pornhub, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'girlneko':
 
@@ -2707,7 +2685,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko = await getBuffer(`https://apidhani.herokuapp.com/api/maker/girlneko?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'sadboy':
 
@@ -2717,7 +2695,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko2 = await getBuffer(`https://apidhani.herokuapp.com/api/maker/sadboy?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko2, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko2, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'makerkaneki':
 
@@ -2727,7 +2705,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko8383 = await getBuffer(`https://apidhani.herokuapp.com/api/maker/kaneki?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko8383, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko8383, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'rem':
 
@@ -2737,7 +2715,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlneko11111 = await getBuffer(`https://apidhani.herokuapp.com/api/maker/rem?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlneko11111, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlneko11111, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'lolimaker':
 
@@ -2747,7 +2725,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlnekojkjk = await getBuffer(`https://apidhani.herokuapp.com/api/maker/lolimaker?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlnekojkjk, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlnekojkjk, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
 case 'gura':
 
@@ -2757,7 +2735,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 girlnekoooo = await getBuffer(`https://apidhani.herokuapp.com/api/maker/gura?apikey=${dhakey}&text=${F1}&text2=${F2}`)
-DogeXeonOP.sendMessage(from, girlnekoooo, image, {caption: `Here u go!😛`, quoted: mek})
+DogeXeonOP.sendMessage(from, girlnekoooo, image, {caption: `! ها أنت ذا😛`, quoted: mek})
 break
                          case 'wolf3':
                          
@@ -2888,7 +2866,7 @@ textImg(`「 *𝗦𝗣𝗘𝗘𝗗 𝗧𝗘𝗦𝗧* 」\nRespond in ${latensie.
 break
 case 'd':
 case 'del':
-case 'delete':
+case 'حذف':
 
 DogeXeonOP.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 break
@@ -3393,17 +3371,17 @@ case 'tts':
 					  try{
         if (args.length > 1) {
         const gtts = require('./lib/gtts')(args[0])
-        if (args.length < 2) return DogeXeonOP.sendMessage(from, 'Where is the text bro??', text, {quoted: mek})
+        if (args.length < 2) return DogeXeonOP.sendMessage(from, 'اين النص اخي ؟؟', text, {quoted: mek})
         ngab = budy.slice(7)
         ranm = getRandom('.mp3')
         rano = getRandom('.ogg')
         ngab.length > 600
-        ? reply('The text is too much bro, max words 600')
+        ? reply('النص كثير جدًا ، الحد الأقصى لعدد الكلمات هو 600')
         : gtts.save(ranm, ngab, function() {
             exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
                 fs.unlinkSync(ranm)
                 buff = fs.readFileSync(rano)
-                if (err) return reply('Failed bro:(')
+                if (err) return reply('فشل:(')
                 DogeXeonOP.sendMessage(from, buff, audio, {quoted:mek,ptt:true})
                 fs.unlinkSync(rano)
             })
@@ -3440,20 +3418,20 @@ break
 
 //══════════[ LEVELING FEATURES ]══════════//
 
-	case 'level':
+	case 'لفل':
 					if (!isGroup) return reply(mess.group)
 					const userLevel = getLevelingLevel(sender)
 					const userXp = getLevelingXp(sender)
 					if (userLevel === undefined && userXp === undefined) return reply(ind.lvlnul())
 					const requiredXp = 5000 * (Math.pow(2, userLevel) - 1)
-					resul = `◪ *ʟᴇᴠᴇʟ*\n  ├─ ► 𝗡𝗮𝗺𝗲 : ${pushname}\n  ├─ ► 𝗥𝗮𝗻𝗸 : ${role}\n  ├─ ► 𝗫𝗣 : ${userXp}/${requiredXp}\n  └─ ► 𝗟𝗲𝘃𝗲𝗹 : ${userLevel}\n`
+					resul = `◪ *لفل خاص بك*\n  ├─ ► 𝗡𝗮𝗺𝗲 : ${pushname}\n  ├─ ► 𝗥𝗮𝗻𝗸 : ${role}\n  ├─ ► 𝗫𝗣 : ${userXp}/${requiredXp}\n  └─ ► 𝗟𝗲𝘃𝗲𝗹 : ${userLevel}\n`
 					DogeXeonOP.sendMessage(from, resul, text, { quoted: mek})
 					.catch(async (err) => {
 					console.error(err)
 					await reply(`Error!\n${err}`)
 					})
 					break
-					case 'profile':
+					case 'بروفايل':
 					if (!isGroup) return reply(mess.group)
 				    let anuprofileoke = await DogeXeonOP.groupMetadata(from)
                     const thu = await DogeXeonOP.getStatus(anuprofileoke.participants[0], MessageType.text)
@@ -3463,7 +3441,7 @@ break
 					} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 					}
-					profile = `╭─「 *💖ʏᴏᴜʀ ᴘʀᴏꜰɪʟᴇ💖* 」\n│• 𝗡𝗮𝗺𝗲 : ${pushname}\n│• 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split("@")[0]}\n│• 𝗕𝗶𝗼 : ${bio_user}\n│• 𝗫𝗣 : ${getLevelingXp(sender)}\n│• 𝗟𝗲𝘃𝗲𝗹 : ${getLevelingLevel(sender)}\n│• 𝗥𝗮𝗻𝗸 : ${role}\n│• 𝗣𝗠 : wa.me/${sender.split("@")[0]}\n╰──────────────────`
+					profile = `╭─「 *💖بروفايل الخاص بك💖* 」\n│• 𝗡𝗮𝗺𝗲 : ${pushname}\n│• 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split("@")[0]}\n│• 𝗕𝗶𝗼 : ${bio_user}\n│• 𝗫𝗣 : ${getLevelingXp(sender)}\n│• 𝗟𝗲𝘃𝗲𝗹 : ${getLevelingLevel(sender)}\n│• 𝗥𝗮𝗻𝗸 : ${role}\n│• 𝗣𝗠 : wa.me/${sender.split("@")[0]}\n╰──────────────────`
 					buffer = await getBuffer(ppimg)
 					DogeXeonOP.sendMessage(from, buffer, image, {quoted: mek, caption: profile})
 					break
@@ -3616,7 +3594,7 @@ case 'gifstiker':
 case 's':
 case 'stickergif':  
 case 'sticker':
-case 'stiker':
+case 'ملصق':
 
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 const encmedialoli = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -3721,12 +3699,9 @@ case 'rate':
 case 'stupid':
       case 'foolish':
       case 'smart':
-      case 'gay':
-      case 'lesbi':
       case 'bastard':
       case 'stubble':
       case 'dog':
-      case 'fuck':
       case 'ape':
       case 'noob':
       case 'great':
@@ -3739,7 +3714,6 @@ case 'stupid':
       case 'kind':
       case 'ugly':
       case 'pretty':
-      case 'lesbian':
       case 'randi':
       case 'gandu':
       case 'madarchod':
@@ -3762,8 +3736,6 @@ case 'stupid':
       case 'behenchod':
       case 'behnchoda':
       case 'bhosdika':
-      case 'nigga':
-      case 'sexy':
       case 'hot':
       if (!isGroup) return reply(mess.only.group)
         membr = []
@@ -4038,7 +4010,7 @@ case 'bc':
 			"footerText": `${tanggal}`,
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
-			"buttonText": {"displayText": "MENU 🗃️"
+			"buttonText": {"displayText": "🗃️ الاوامر"
 			},"type": "RESPONSE"}
 			], "headerType": 'LOCATION',
 			locationMessage: { degreesLatitude: '',
@@ -4457,7 +4429,7 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiLink) return reply(`Already active`)
 _antilink.push(from)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`Success ✅, Activating the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم ✅, تفعيل مضاد الروابط فالمجموعة\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantilink = _antilink.indexOf(from)
 _antilink.splice(anuantilink, 1)
@@ -4599,7 +4571,7 @@ console.log('Error :', e)
 reply('Failed to add target, maybe because in private')
 }
 break
-case "kick":
+case "طرد":
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4668,15 +4640,15 @@ DogeXeonOP.updateProfilePicture(from, media)
 reply(`Send or tag an image with a caption ${prefix}setppgrup`)
 }
 break
-case 'hidetag':
+case 'فعالية':
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !isOwner && !mek.key.fromMe) return reply(mess.only.admin)
 try {
 quotedText = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
-hideTag(from, `${quotedText}`)
+hidetag(from, `${quotedText}`)
 } catch {
-hideTag(from, `${q}`)
+hidetag(from, `${q}`)
 }
 break
 case 'infogc':
@@ -4684,7 +4656,7 @@ case 'infogrup':
 case 'infogrouup':
 case 'grupinfo':
 case 'groupinfo':
-case 'gcinfo':
+case 'قروب':
 
 if (!isGroup) return reply(mess.only.group)
 try {
@@ -4732,7 +4704,7 @@ break
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `🐶 @${mem.jid.split('@')[0]}\n`
+						teks += `� @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
@@ -4882,9 +4854,9 @@ argzi = arg.split('|')
 if (!argzi) return reply(`Use ${prefix}kontag @tag|name`)
 if (mek.message.extendedTextMessage != undefined){
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-hideTagKontak(from, mentioned[0].split('@')[0], argzi[1])
+hidetagKontak(from, mentioned[0].split('@')[0], argzi[1])
 } else {
-hideTagKontak(from, argzi[0], argzi[1])
+hidetagKontak(from, argzi[0], argzi[1])
 }
 break
 case 'contact':
