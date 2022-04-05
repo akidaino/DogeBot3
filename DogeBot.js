@@ -271,19 +271,19 @@ console.log(e)
 //══════════[ Mess Dll ]══════════//
 
 mess = {
-wait: 'In process...',
-eror: 'Sorry an error occurred!!',
-success: 'Done✓',
+wait: 'تحت المعالجة...',
+eror: 'أسف لقد حصل خطأ!!',
+success: 'تم✓',
 error: {
-stick: 'Thats not a sticker bro !!',
-Iv: 'Link invalid !!'
+stick: 'هذا مو ستيكر يخوي !!',
+Iv: 'خطا في الرابط !!'
 },
 only: {
-nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
-group: 'This feature is only for group!!',
-owner: 'This feature is only for owner!!',
-admin: 'This feature is onlu for admin!!',
-Badmin: 'Please give adminship to the bot first!!'
+nsfw: 'لم يتم تنشيط ميزة nsfw ، يرجى الاتصال بالمسؤول للتفعيل',
+group: 'هذه الميزة للمجموعة فقط!!',
+owner: 'هذا الامر فقط للمطور!!',
+admin: 'هذا الأمر فقط للمشرف!!',
+Badmin: 'شسمه حطني مشرف اول!!'
 }
 }
 
@@ -479,21 +479,21 @@ for (let anji of setik){
 			const levelRole = getLevelingLevel(sender)
    	        	     var role = 'bronz'
    	     if (levelRole <= 3) {
-   	         role = 'Copper'
+   	         role = 'مبتدئ ⇇ 1'
    	     } else if (levelRole <= 5) {
-   	         role = 'Iron'
+   	         role = 'مبتدئ ⇇ 2'
    	     } else if (levelRole <= 7) {
-   	         role = 'Silver'
+   	         role = 'محترف ⇇ 1'
    	     } else if (levelRole <= 10) {
-   	         role = 'Gold'
+   	         role = 'محترف ⇇ 2'
    	     } else if (levelRole <= 12) {
-   	         role = 'Platinum'
+   	         role = 'خبير ⇇ 1'
    	     } else if (levelRole <= 15) {
-   	         role = 'Mithril'
+   	         role = 'خبير ⇇ 2'
    	     } else if (levelRole <= 18) {
-   	         role = 'Orichalcum'
+   	         role = 'المحنك'
    	     } else if (levelRole <= 25) {
-   	         role = 'Adamantite'
+   	         role = 'العم'
    	     }
 
 	//══════════[ Leveling Function ]══════════//
@@ -509,16 +509,16 @@ for (let anji of setik){
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                 addLevelingLevel(sender, 1)   
-                var lvlup = (`╭───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」
+                var lvlup = (`╭───「 *🥳ترقية المستوى🥳* 」
 │
-├ 💜 𝗡𝗮𝗺𝗲 : ${pushname}
-├ 📱 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split('@')[0]}
-├ 🏅 𝗥𝗮𝗻𝗸 : ${role}
-├ 🔖 𝗫𝗣 : ${getLevelingXp(sender)}
-├ 💠 𝗟𝗲𝘃𝗲𝗹  : ${getLevelingLevel(sender)}
+├ 💜 الاسم : ${pushname}
+├ 📱 الرقم : ${sender.split('@')[0]}
+├ 🏅 رتبة : ${role}
+├ 🔖 اكس بي (XP) : ${getLevelingXp(sender)}
+├ 💠 المستوى𝗹  : ${getLevelingLevel(sender)}
 │
-╰───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」`)
-		  but = [{ buttonId: `!menu`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }]
+╰───「 *🥳ترقية المستوى🥳* 」`)
+		  but = [{ buttonId: `!menu`, buttonText: { displayText: 'الاوامر 🗃️' }, type: 1 }]
           sendButton(from, lvlup, '*جيرايا*', but)
 
                 }
@@ -535,9 +535,9 @@ if (!isGroup) return
 if (!isAntiLink) return
 if (isGroupAdmins) return
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-reply(` *「 GROUP LINK DETECTED 」*\nYou sent the group chat link, sorry you will be kicked from the group`)
+reply(` *「 GROUP LINK DETECTED 」*\nيخوي قلنا بدون روابط🗿.`)
 setTimeout(() => {
-DogeXeonOP.groupRemove(from, [kic]).catch((e) => { reply(`BOTS MUST BE ADMIN`) })
+DogeXeonOP.groupRemove(from, [kic]).catch((e) => { reply(`يجب على البوت ان يكون مشرفا`) })
 }, 0)
 }
 
@@ -631,98 +631,98 @@ rows: [
 "rowId": `${prefix}grupmenu`
 },
 {
-"title": "DOWNLOAD MENU",
-"description": `Display A List Of Features To Download`,
+"title": "قائمة التحميل",
+"description": `عرض اوامر التحميل`,
 "rowId": `${prefix}downloadmenu`
 },
 {
-"title": "MAKER MENU",
-"description": `Display A List Of Features To Create Logo`,
+"title": "قائمة الانشاء",
+"description": `عرض اوامر انشاء لوجو`,
 "rowId": `${prefix}makermenu`
 },
 {
-"title": "GAME MENU",
-"description": `Display A List Of Game Features`,
+"title": "قائمة الالعاب",
+"description": `عرض اوامر الالعاب`,
 "rowId": `${prefix}gamemenu`
 },
 {
-"title": "RANDOM IMAGE MENU",
-"description": `Display A List Of Random Photo Features`,
+"title": "قائمة الصور العشوائية",
+"description": `عرض اوامر الصور`,
 "rowId": `${prefix}randomimage`
 },
 {
-"title": "RANDOM VIDEO",
-"description": `Display A List Of Random Video Features`,
+"title": "قائمة الفيديوهات العشوائية",
+"description": `عرض اوامر الفيديوهات`,
 "rowId": `${prefix}randomvideo`
 },
 {
-"title": "AESTHETIC GIRL MENU (ممنوع)",
+"title": "محذوف (ممنوع)",
 "description": `Display A List Of 18+ Intake Features`,
 "rowId": `${prefix}asupanmenu`
 },
 {
-"title": "RANDOM GIRL MENU (ممنوع)",
+"title": "محذوف (ممنوع)",
 "description": `Display A List Of Random Girl Features`,
 "rowId": `${prefix}cecanmenu`
 },
 {
-"title": "ANIME MENU",
-"description": `Display A List Of Anime Features`,
+"title": "قائمة الانمي",
+"description": `اوامر الانمي قيد الانشاء`,
 "rowId": `${prefix}animemenu`
 },
 {
-"title": "NSFW/HENTAI MENU (ممنوع)",
+"title": "محذوف (ممنوع)",
 "description": `Display A List Of Nsfw 18+ Features`,
 "rowId": `${prefix}nsfwmenu`
 },
 {
-"title": "STICKER MENU",
-"description": `Display A List Of Sticker Features`,
+"title": "قائمة الملصقات",
+"description": `اوامر الملصقات`,
 "rowId": `${prefix}stickermenu`
 },
 {
-"title": "FUN MENU",
-"description": `Display A List Of Fun Features`,
+"title": "قائمة المزح",
+"description": `اوامر المزح`,
 "rowId": `${prefix}funmenu`
 },
 {
-"title": "SOUND MENU",
-"description": `Display A List Of Sounds`,
+"title": "قائمة الصوت",
+"description": `اوامر الصوت`,
 "rowId": `${prefix}soundmenu`
 },
 {
-"title": "OCR MENU",
-"description": `Display A List Of Ocr Features`,
+"title": "OCR قائمة ",
+"description": `عرض اوامر OCR`,
 "rowId": `${prefix}ocrmenu`
 },
 {
-"title": "CONVERTER MENU",
-"description": `Display A List Of Convert Features`,
+"title": "قائمة التحويل",
+"description": `عرض اوامر التحويل`,
 "rowId": `${prefix}convertmenu`
 },
 {
-"title": "LEVELING MENU",
-"description": `Display A List Of Leveling Features`,
+"title": "قائمة المستوى",
+"description": `قائمة المستوى`,
 "rowId": `${prefix}levelingmenu`
 },
 {
-"title": "SEARCH MENU",
-"description": `Display A List Of Searching Features`,
+"title": "قائمة البحث",
+"description": `عرض اوامر البحث`,
 "rowId": `${prefix}searchmenu`
 },
 {
-"title": "APK MENU",
-"description": `Display A List Of Apk Features`,
+"title": "قائمة التطبيقات",
+"description": `عرض اوامر التطبيقات`,
 "rowId": `${prefix}apkmenu`
 },
 {
-"title": "OTHER MENU",
-"description": `Display A List Of Other Features`,
+"title": "قائمة اوامر اخرى",
+"description": `عرض الاوامر`,
 "rowId": `${prefix}othermenu`
 },
 {
-"title": "OWNER MENU",
-"description": `Display A List Of Owner Features`,
+"title": "قائمة المطور",
+"description": `عرض اوامر المطور`,
 "rowId": `${prefix}ownermenu`
 }
 ]
@@ -757,7 +757,7 @@ ${gaya2} ${prefix}setname _text_
 ${gaya2} ${prefix}getbio _reply target_
 ${gaya2} ${prefix}getdp _tag_
 ${gaya2} ${prefix}getname _reply target_
-${gaya2} ${prefix}tagall
+${gaya2} ${prefix}منشن
 ${gaya2} ${prefix}hidetag _text_
 ${gaya2} ${prefix}contact _916x|Name_
 ${gaya2} ${prefix}contag _@tag|Name_
@@ -4622,7 +4622,7 @@ DogeXeonOP.groupRemove(from, mentioned);
 reply(mess.success);
 }
 break;
-case 'tagall':
+case 'منشن':
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -4724,7 +4724,7 @@ break
              reply(`${e}`)
 }
              break
-                           case 'tagall':
+                           case 'منشن':
                 case 'tag':
 					if (!isGroup) return reply(mess.group)
 					if (!isGroupAdmins && !mek.key.fromMe) return reply('only admin and bot owner can use this feature')
