@@ -1184,7 +1184,7 @@ menu =
 `*「 قائمة الملصقات 」*
 
 ${gaya2} ${prefix}stickerwm _Author|Package_
-${gaya2} ${prefix}زرف _Author|Package_
+${gaya2} ${prefix}take _Author|Package_
 ${gaya2} ${prefix}sticker (ملصق) _Reply_
 ${gaya2} ${prefix}attp _Text_
 ${gaya2} ${prefix}ttp _Text_
@@ -3486,7 +3486,7 @@ case 'memegenerator': case 'memegen':{
 										}
 									break
 case 'takestick':
-case 'takesticker':
+case 'زرف':
 					case 'take':
 						if (!isQuotedSticker) return reply(`Reply sticker with caption *${prefix}takestick name|author*`)
 						ppp = `${args.join(' ')}`
@@ -3583,7 +3583,7 @@ case 'gifstiker':
 case 's':
 case 'stickergif':  
 case 'sticker':
-case 'ملصق':
+case 'stiker':
 
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 const encmedialoli = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
