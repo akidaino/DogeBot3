@@ -742,7 +742,7 @@ ${gaya2} ${prefix}setname _text_
 ${gaya2} ${prefix}getbio _reply target_
 ${gaya2} ${prefix}getdp _tag_
 ${gaya2} ${prefix}getname _reply target_
-${gaya2} ${prefix}منشن
+${gaya2} ${prefix}sticker (ملصق)
 ${gaya2} ${prefix}فعالية _text_
 ${gaya2} ${prefix}contact _916x|Name_
 ${gaya2} ${prefix}contag _@tag|Name_
@@ -1184,8 +1184,8 @@ menu =
 `*「 قائمة الملصقات 」*
 
 ${gaya2} ${prefix}stickerwm _Author|Package_
-${gaya2} ${prefix}take _Author|Package_
-${gaya2} ${prefix}sticker _Reply_
+${gaya2} ${prefix}زرف _Author|Package_
+${gaya2} ${prefix}sticker (ملصق) _Reply_
 ${gaya2} ${prefix}attp _Text_
 ${gaya2} ${prefix}ttp _Text_
 ${gaya2} ${prefix}ttp2 _Text_
