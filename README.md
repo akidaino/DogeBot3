@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<strong>Jiraya Bot V3</strong>
+<strong>Doge Bot V3</strong>
 </p>
 
 </div>
@@ -57,29 +57,46 @@ heroku/nodejs
 * Any text editor
 ## `Clone Repo & Installation dependencies`
 ```bash
-💠 git clone https://github.com/DGXeon/DogeBot.git
-💠 cd DogeBot3
-💠 npm start
+🦄 git clone https://github.com/DGXeon/DogeBot.git
+🦄 cd DogeBot3
+🦄 npm start
 ```
 ## `For Termux/Ssh/Ubuntu`
 ```bash
-💠 apt update
-💠 apt upgrade
-💠 pkg update && pkg upgrade 
-💠 pkg install hot
-💠 pkg install bash
-💠 pkg install libwebp
-💠 pkg install git -y
-💠 pkg install nodejs -y 
-💠 pkg install ffmpeg -y 
-💠 pkg install wget
-💠 pkg install imagemagick -y
-💠 git clone https://github.com/dogebote/DogeBot3.git
-💠 cd DogeBot3
-💠 ls
-💠 rm -rf session.json
-💠 npm start
-💠 scan qr code within 15seconds
+🦄 apt update
+🦄 apt upgrade
+🦄 pkg update && pkg upgrade 
+🦄 pkg install hot
+🦄 pkg install bash
+🦄 pkg install libwebp
+🦄 pkg install git -y
+🦄 pkg install nodejs -y 
+🦄 pkg install ffmpeg -y 
+🦄 pkg install wget
+🦄 pkg install imagemagick -y
+🦄 git clone https://github.com/DGXeon/DogeBot2
+🦄 cd DogeBot3
+🦄 ls
+🦄 rm -rf session.json
+🦄 npm start
+🦄 scan qr code within 15seconds
 ```
+## Installation Video 👇
+- Review video [Click here](https://youtu.be/zXvwqA8LvTw)
+- Tutorial video [Click here](https://youtu.be/B7DN5miMS3k)
+## Connect With Me
+My Personal Chat👇
+<p align="center">
+ <a href="https://wa.me/+34613110267"><img alt="WhatsApp Personal Chat" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
+</p>
 
+My Whatsapp Group👇
+<p align="center">
+ <a href="https://chat.whatsapp.com/CF77CbLwt965pglZ2Zb91h"><img alt="WhatsApp Group" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
+</p>
 
+* [`My Youtube Channel`](https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A)
+
+# Thanks To 👇
+* [`Baileys`](https://github.com/adiwajshing/Baileys)
+* [`Xeon`](https://github.com/DGXeon)
