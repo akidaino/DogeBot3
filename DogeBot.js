@@ -577,7 +577,7 @@ switch (command) {
 //══════════[ MENU FEATURES ]══════════//
 
 case 'menu':
-case 'جرجير':
+case 'اوامر':
 
 timestampe = speed();
 latensie = speed() - timestampe
@@ -936,8 +936,8 @@ case 'gamemenu':
 menu =
 `*「 قائمة الالعاب 」*
 
-${gaya2} ${prefix}truth
-${gaya2} ${prefix}dare`
+${gaya2} ${prefix}حقيقة
+${gaya2} ${prefix}جرئة`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randomimage':
@@ -1202,30 +1202,30 @@ case 'funmenu':
 menu =
 `*「 قائمة المزح 」*
 
-${gaya2} ${prefix}ship _tag/tag_
-${gaya2} ${prefix}rate _reply_
-${gaya2} ${prefix}can _question_
-${gaya2} ${prefix}is _question_
-${gaya2} ${prefix}when _question_
-${gaya2} ${prefix}stupid
-${gaya2} ${prefix}foolish
-${gaya2} ${prefix}smart
-${gaya2} ${prefix}handsome
-${gaya2} ${prefix}beautiful
-${gaya2} ${prefix}bastard
-${gaya2} ${prefix}stubble
-${gaya2} ${prefix}dog
-${gaya2} ${prefix}ugly
-${gaya2} ${prefix}ape
-${gaya2} ${prefix}cute
-${gaya2} ${prefix}noob
-${gaya2} ${prefix}kind
-${gaya2} ${prefix}great
-${gaya2} ${prefix}horny
-${gaya2} ${prefix}wibu
-${gaya2} ${prefix}asshole
-${gaya2} ${prefix}couple
-${gaya2} ${prefix}charactercheck [tag]`
+${gaya2} ${prefix}تشبيك _منشن حدا/منشن حدا_
+${gaya2} ${prefix}معدل _رد عرسالة حدا_
+${gaya2} ${prefix}يمكنني _سؤال ما_
+${gaya2} ${prefix}هل _سؤال ما_
+${gaya2} ${prefix}متى _سؤال ما_
+${gaya2} ${prefix}غبي
+${gaya2} ${prefix}احمق
+${gaya2} ${prefix}ذكي
+${gaya2} ${prefix}وسيم
+${gaya2} ${prefix}جميل
+${gaya2} ${prefix}نذل
+${gaya2} ${prefix}احبه
+${gaya2} ${prefix}كلب
+${gaya2} ${prefix}بشع
+${gaya2} ${prefix}قرد
+${gaya2} ${prefix}جذاب
+${gaya2} ${prefix}نوب
+${gaya2} ${prefix}عطوف
+${gaya2} ${prefix}رائع
+${gaya2} ${prefix}معرق
+${gaya2} ${prefix}كيوت
+${gaya2} ${prefix}ظريف
+${gaya2} ${prefix}تيكن
+${gaya2} ${prefix}كم يحبني [منشن]`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'soundmenu':
@@ -3580,7 +3580,7 @@ case 'semoji':
            })
     	   break
 case 'gifstiker':
-case 's':
+case 'ملصق':
 case 'stickergif':  
 case 'sticker':
 case 'stiker':
@@ -3661,47 +3661,47 @@ break
 
 //══════════[ FUN FEATURES ]══════════//
 case 'rate':
-				case 'ship':
+				case 'تشبيك':
 					rate = body.slice(1)
 					const ra =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const te = ra[Math.floor(Math.random() * ra.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+rate+'*\n\nAnswer : '+ te+'%', text, { quoted: mek})
+					DogeXeonOP.sendMessage(from, 'تست نشوف : *'+rate+'*\n\nنسبة الحب المتوقعة : '+ te+'%', text, { quoted: mek})
 					break
-                case 'can':
+                case 'يمكنني':
 					bisakah = body.slice(1)
-					const bisa =['Can', 'Cant', 'Try again','Are you dreaming?','Are you sure you can?']
+					const bisa =['اجل يمكنك ذالك', 'لا كنسل', ' ما في مستحيل','اذا واثق من نفسك يب','ممممم حسب الوضع']
 					const keh = bisa[Math.floor(Math.random() * bisa.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+bisakah+'*\n\nAnswer : '+ keh, text, { quoted: mek })
+					DogeXeonOP.sendMessage(from, 'السؤال : *'+bisakah+'*\n\nالجواب : '+ keh, text, { quoted: mek })
 					break
-				case 'when':
+				case 'متى':
 					kapankah = body.slice(1)
-					const kapan =['Tomorrow','The day after tomorrow','Earlier','4 Days','5 Days','6 Days','1 Week Again','2 Weeks Again','3 Weeks Again','1 Month Again','2 Months','3 Months','4 Months','5 Months','6 Months Again']
+					const kapan =['بكرا','شرايك الحين🐧؟','اسبوع جاي','السنة المقبلة ان شاء الله','ما في لا تحلم ابد 🤣','بعد 3 ايام','بعد يومين','بعد 3 ثواني🐧','مممممم انسى ما في','بعد قرن🐧','طيب الان','متى ما بدك ان شاء الله','حسب ضروفك','بعد سنتين','بعد شهر ونص🐧']
 					const koh = kapan[Math.floor(Math.random() * kapan.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+kapankah+'*\n\nAnswer : '+ koh, text, { quoted: mek })
+					DogeXeonOP.sendMessage(from, 'السؤال : *'+kapankah+'*\n\nالجواب : '+ koh, text, { quoted: mek })
 					break
-         			  case 'is':
+         			  case 'هل':
 					apakah = body.slice(1)
-					const apa =['Yes','No','Could be','I dont know lmao','Ask the Chicken']
+					const apa =['نعم','لا','يمكن','مدري صراحة','اتوقعععع يب 🐧🤣']
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+apakah+'*\n\nAnswer : '+ kah, text, { quoted: mek })
+					DogeXeonOP.sendMessage(from, 'السؤال : *'+apakah+'*\n\nالجواب : '+ kah, text, { quoted: mek })
 					break
-case 'stupid':
-      case 'foolish':
-      case 'smart':
-      case 'bastard':
-      case 'stubble':
-      case 'dog':
-      case 'ape':
-      case 'noob':
-      case 'great':
-      case 'horny':
-      case 'wibu':
-      case 'asshole':
-      case 'handsome':
-      case 'beautiful':
-      case 'cute':
-      case 'kind':
-      case 'ugly':
+case 'غبي':
+      case 'احمق':
+      case 'ذكي':
+      case 'وسيم':
+      case 'جميل':
+      case 'نذل':
+      case 'احبه':
+      case 'كلب':
+      case 'بشع':
+      case 'قرد':
+      case 'جذاب':
+      case 'نوب':
+      case 'عطوف':
+      case 'رائع':
+      case 'معرق':
+      case 'كيوت':
+      case 'ظريف':
       case 'pretty':
       case 'randi':
       case 'gandu':
@@ -3732,17 +3732,17 @@ case 'stupid':
         const go = groupMembers
         const goo = pff[Math.floor(Math.random() * pff.length)]
         const oe = go[Math.floor(Math.random() * go.length)]
-        teks = `*The most ${command} here is:* @${goo.jid.split('@')[0]}`
+        teks = `*اكثر واحد ${command} فالقروب هو:* @${goo.jid.split('@')[0]}`
         membr.push(goo.jid)
         mentions(teks, membr, true, { quoted: mek })
         break
-                     case "couple":
+                     case "تيكن":
 					jds = []
 					const jdii = groupMembers
 					const koss = groupMembers
 					const akuu = jdii[Math.floor(Math.random() * jdii.length)]
 					const diaa = koss[Math.floor(Math.random() * koss.length)]
-					teks = `Ciee.. whats happening here @${akuu.jid.split('@')[0]} ♥️👀 @${diaa.jid.split('@')[0]} `
+					teks = `مممم.. يبدو... @${akuu.jid.split('@')[0]} ♥️👀 @${diaa.jid.split('@')[0]} `
 					jds.push(akuu.jid)
 					jds.push(diaa.jid)
 					mentions(teks, jds, true)
@@ -3776,23 +3776,23 @@ ganteng = body.slice(1)
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 					DogeXeonOP.sendMessage(from, 'Question : *'+ganteng+'*\n\nAnswer : '+ teng+'%', text, { quoted: mek })
 					break
-		case 'beautycheck':
+		case 'كم يحبني':
 					// source code by xeon⛔
 cantik = body.slice(1)
 					const can =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+cantik+'*\n\nAnswer : '+ tik+'%', text, { quoted: mek })
+					DogeXeonOP.sendMessage(from, 'السؤال : *'+cantik+'*\n\nAnswer : '+ tik+'%', text, { quoted: mek })
 					break
-		case 'charactercheck':
+		case 'beautycheck':
 					// source code by xeon⛔
 watak = body.slice(1)
 					const wa =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const tak = wa[Math.floor(Math.random() * wa.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+watak+'*\n\nAnswer : '+ tak, text, { quoted: mek })
+					DogeXeonOP.sendMessage(from, 'Question : *'+watak+'*\n\nالجواب : '+ tak, text, { quoted: mek })
 				        break
 				
 //══════════[ GAME FEATURES ]══════════//
-       case 'dare':
+       case 'جرئة':
               const dare =[
     "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
     "spill people who make you pause",
@@ -3881,7 +3881,7 @@ watak = body.slice(1)
               DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*DARE*_\n'+ der })
               break
                             break
-       case 'truth':
+       case 'حقيقة':
               const truth =[
     "Have you ever liked anyone? How long?",
     "If you can or if you want, which gc/outside gc would you make friends with? (maybe different/same type)",
@@ -3999,7 +3999,7 @@ case 'bc':
 			"footerText": `${tanggal}`,
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
-			"buttonText": {"displayText": "🗃️ الاوامر"
+			"buttonText": {"displayText": "الاوامرn🗃️"
 			},"type": "RESPONSE"}
 			], "headerType": 'LOCATION',
 			locationMessage: { degreesLatitude: '',
@@ -4053,7 +4053,7 @@ bcgc = await DogeXeonOP.downloadMediaMessage(encmediabcgc)
 for (let _ of groupMembers) {
 DogeXeonOP.sendMessage(_.jid, bcgc, image, { caption: `*「 DOGE BOT BROADCAST 」*\n*Group* : ${groupName}\n\n${body.slice(6)}` })
 }
-reply('')
+reply('')y
 } else {
 for (let _ of groupMembers) {
 sendMess(_.jid, `*「 DOGE BOT BROADCAST 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
@@ -4354,7 +4354,7 @@ case 'getdp':
 const sname = DogeXeonOP.contacts[ambl] != undefined ? DogeXeonOP.contacts[ambl].notify = undefined ? PhoneNumber('+' + ambl.replace('@s.whatsapp.net', '')).getNumber('international') : DogeXeonOP.contacts[ambl].notify || DogeXeonOP.contacts[ambl].vname : PhoneNumber('+' + ambl.replace('@s.whatsapp.net', '')).getNumber('international')
 reply(sname)
 break
-case 'leave':
+case 'اطلع':
             if (!isGroup) return reply(mess.only.group)
                     if (isGroupAdmins || isOwner) {
                     	DogeXeonOP.groupLeave(from)
@@ -4545,7 +4545,7 @@ members_id.push(mem.jid)
 }
 DogeXeonOP.groupMakeAdmin(from, members_id)
 break
-case 'add' :
+case 'دخل' :
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4653,7 +4653,7 @@ var pic = await DogeXeonOP.getProfilePicture(from)
 } catch {
 var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 }
-let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*Group ID :* ${from}\n*Made :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n*Group Owner :* @${groupMetadata.owner.split('@')[0]}\n*Number of Admins :* ${groupAdmins.length}\n*Number of participants :* ${groupMembers.length}\n*Welcome :* ${isWelkom ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*Desc :* \n\n${groupMetadata.desc}`
+let ingfo = `*معلومات القروب*\n\n*الاسم :* ${groupName}\n*ايدي قروب :* ${from}\n*وقت انشائه :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n*مؤسس المجموعه :* @${groupMetadata.owner.split('@')[0]}\n*عدد المشرفين :* ${groupAdmins.length}\n*عدد الاعضاء :* ${groupMembers.length}\n*الترحيب :* ${isWelkom ? 'Aktif' : 'Mati'}\n*مضاد الروابط :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*ديسك :* \n\n${groupMetadata.desc}`
 DogeXeonOP.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
 break
 case 'resetlinkgc':
