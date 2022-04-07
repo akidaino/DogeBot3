@@ -55,7 +55,7 @@ console.log(color('  Xeon Bot Inc. 2022','mediumseagreen'))
         success('2', 'Connected ✓')
     })
         //inform to developer that the user is connected to bot
-    DogeXeonOP.sendMessage(`34613110267@s.whatsapp.net`, `شكرا دادي جيرايا بوتك اشتغل معي 🥰✋`, MessageType.extendedText)
+    DogeXeonOP.sendMessage(`34613110267@s.whatsapp.net`, `شكرا دادي جيرايا بوتك اشتغل معي 💠✋`, MessageType.extendedText)
     
     //group link target
     teks = `https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS`
@@ -103,8 +103,8 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       anu_user = v.vname || v.notify || num.split('@')[0]
       time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
       time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
-      teks = `  🥰    منور ⇇ _*@${num.split('@')[0]}*_ \n  🥰    البايو ⇇ : _*${thu.status}*_ \n  🥰    عدد الاعضاء ⇇ : _*${memeg}*_ \n  🥰    نورتنا في ⇇ _*${mdata.subject}*_\n  🥰    ⇇لا تنسى تقرا القوانين الرابط فالوصف⇉`
-      welcomeBut = [{buttonId:`#menu`,buttonText:{displayText:'MENU 🗂️'},type:1}, {buttonId:`#getdesc`,buttonText:{displayText:'READ DESC 📋'},type:1}]
+      teks = `  💠    منور ⇇ _*@${num.split('@')[0]}*_ \n  💠    البايو ⇇ : _*${thu.status}*_ \n  💠    عدد الاعضاء ⇇ : _*${memeg}*_ \n  💠    نورتنا في ⇇ _*${mdata.subject}*_\n  💠    ⇇لا تنسى تقرا القوانين الرابط فالوصف⇉`
+      welcomeBut = [{buttonId:`#menu`,buttonText:{displayText:'قائمة الاوامر 🗂️'},type:1}, {buttonId:`#getdesc`,buttonText:{displayText:'قرائة الوصف 📋'},type:1}]
       welcomeButt = { contentText: `${teks}`, footerText: `جيرايا العم`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
       }
@@ -118,7 +118,7 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
       time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
       memeg = mdata.participants.length
-      out = `  😾    اجل انقلع🗿 _*@${num.split('@')[0]}*_\n  😼    كيف الطرد بس 🥰✋`
+      out = `  💠    اتمنى لك التوفيق 💙 _*@${num.split('@')[0]}*_\n  💠    فقدنا شخص اخر 🐧💔`
       goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'BYE 👋'},type:1}, {buttonId:`#menu`,buttonText:{displayText:'MENU 🗂️'}, type:1}]
       goodbyeButt = { contentText: `${out}`, footerText: `جيرايا العم`, buttons: goodbyeBut, headerType: 6, locationMessage: bosco3.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, goodbyeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
