@@ -101,10 +101,10 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       const bosco2 = bosco1.message["ephemeralMessage"] ? bosco1.message.ephemeralMessage : bosco1
       let v = DogeXeonOP.contacts[num] || { notify: num.replace(/@.+/, '') }
       anu_user = v.vname || v.notify || num.split('@')[0]
-      time_welc = moment.tz('Asia/Saudi Arabia').format('DD/MM/YYYY')
-      time_wel = moment.tz('Asia/Saudi Arabia').format("hh:mm")
-      teks = `  🥰    منور ⇇ _*@${num.split('@')[0]}*_ \n  🥰    البايو ⇇ : _*${thu.status}*_ \n  🥰    عدد الاعضاء ⇇ : _*${memeg}*_ \n  🥰    نورتنا في ⇇ _*${mdata.subject}*_\n  🥰    ⇇لا تنسى تقرا القوانين الرابط فالوصف⇉`
-      welcomeBut = [{buttonId:`#menu`,buttonText:{displayText:'MENU 🗂️'},type:1}, {buttonId:`#getdesc`,buttonText:{displayText:'READ DESC 📋'},type:1}]
+      time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+      time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
+      teks = `💠    منور ⇇ _*@${num.split('@')[0]}*_ \n  💠البايو ⇇  _*${thu.status}*_ \n  💠عدد الاعضاء ⇇  _*${memeg}*_ \n  💠نورتنا في ⇇ _*${mdata.subject}*_\n  💠⇇لا تنسى القوانين الرابط فالوصف⇉`
+      welcomeBut = [{buttonId:`#menu`,buttonText:{displayText:'قائمة الاوامر 🗂️'},type:1}, {buttonId:`#getdesc`,buttonText:{displayText:'قرائة الوصف 📋'},type:1}]
       welcomeButt = { contentText: `${teks}`, footerText: `جيرايا العم`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
       }
@@ -115,11 +115,11 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       const bosco4 = bosco3.message["ephemeralMessage"] ? bosco3.message.ephemeralMessage : bosco3
       let w = DogeXeonOP.contacts[num] || { notify: num.replace(/@.+/, '') }
       anu_user = w.vname || w.notify || num.split('@')[0]
-      time_welc = moment.tz('Asia/Saudi Arabia').format('DD/MM/YYYY')
-      time_wel = moment.tz('Asia/Saudi Arabia').format("hh:mm")
+      time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+      time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
       memeg = mdata.participants.length
-      out = `  😾    اجل انقلع🗿 _*@${num.split('@')[0]}*_\n  😼    كيف الطرد بس 🥰✋`
-      goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'BYE 👋'},type:1}, {buttonId:`#menu`,buttonText:{displayText:'MENU 🗂️'}, type:1}]
+      out = `  💠اتمنى لك التوفيق 💙 _*@${num.split('@')[0]}*_\n  💠 فقدنا شخص اخر 🐧💔`
+      goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'ربنا معاك 👋'},type:1}, {buttonId:`#menu`,buttonText:{displayText:'قائمة الاوامر 🗂️'}, type:1}]
       goodbyeButt = { contentText: `${out}`, footerText: `جيرايا العم`, buttons: goodbyeBut, headerType: 6, locationMessage: bosco3.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, goodbyeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
       }
