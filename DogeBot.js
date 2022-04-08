@@ -615,7 +615,7 @@ _بوت جيرايا الافضل_
 _اتمنى ${prefix}افيدكم_`
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'الاوامر 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'جيرايا 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'المطور 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
-case 'جيرايا':
+case 'اوامر':
 
 listMsg = {
 buttonText: 'الاوامر 📃',
