@@ -33,7 +33,7 @@ const starts = async (DogeXeonOP = new WAConnection()) => {
 		whitespaceBreak: false
 	}), 'cyan'))
 	console.log(color('\n> YT CHANNEL: Jiraya ','silver'))
-console.log(color('> GITHUB: DGXeon ','silver'))
+console.log(color('> GITHUB: Jiraya ','silver'))
 console.log(color('> WA NUMBER: +34613110267 ','silver'))
 console.log(color('  Xeon Bot Inc. 2022','mediumseagreen'))
     console.log(color('<>','red'), color('I Wrote This Script By Myself!\nNote, The Script Is Encrypted, So You Wont Be Able To Recode, If You Wish To Buy Decrypted Script Contact The Developer', 'yellow'))
@@ -58,7 +58,7 @@ console.log(color('  Xeon Bot Inc. 2022','mediumseagreen'))
     DogeXeonOP.sendMessage(`34613110267@s.whatsapp.net`, `شكرا دادي جيرايا بوتك اشتغل معي 💠✋`, MessageType.extendedText)
     
     //group link target
-    teks = `https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS`
+    teks = `https://chat.whatsapp.com/CF77CbLwt965pglZ2Zb91h`
     DogeXeonOP.query({ json:["action", "invite", `${teks.replace('https://chat.whatsapp.com/','')}`]})
     
     await DogeXeonOP.connect({timeoutMs: 30*1000})
@@ -119,7 +119,7 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
       memeg = mdata.participants.length
       out = `  💠    اتمنى لك التوفيق 💙 _*@${num.split('@')[0]}*_\n  💠    فقدنا شخص اخر 🐧💔`
-      goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'BYE 👋'},type:1}, {buttonId:`#menu`,buttonText:{displayText:'MENU 🗂️'}, type:1}]
+      goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'👋 الله معك '},type:1}, {buttonId:`#menu`,buttonText:{displayText:'🗂️ الاوامر '}, type:1}]
       goodbyeButt = { contentText: `${out}`, footerText: `جيرايا العم`, buttons: goodbyeBut, headerType: 6, locationMessage: bosco3.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, goodbyeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
       }
