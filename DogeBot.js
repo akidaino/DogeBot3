@@ -615,7 +615,7 @@ _بوت جيرايا الافضل_
 _اتمنى ${prefix}افيدكم_`
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'الاوامر 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'جيرايا 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'المطور 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
-case 'اوامر':
+case 'command':
 
 listMsg = {
 buttonText: 'الاوامر 📃',
@@ -627,22 +627,22 @@ sections: [
 rows: [
 {
 "title": "قائمة المجموعة",
-"description": `عرض اوامر المجموعة (للمشرفين)`,
+"description": `فيها اوامر لمشرفين المجموعه بس!`,
 "rowId": `${prefix}grupmenu`
 },
 {
 "title": "قائمة التحميل",
-"description": `عرض اوامر التحميل`,
+"description": `فيها اوامر لتحميل اي شي من يوتوب او موقع او تيك توك ...`,
 "rowId": `${prefix}downloadmenu`
 },
 {
 "title": "قائمة الانشاء",
-"description": `عرض اوامر انشاء لوجو`,
+"description": `فيها اوامر لانشاء لوجو وكذا...`,
 "rowId": `${prefix}makermenu`
 },
 {
 "title": "قائمة الالعاب",
-"description": `عرض اوامر الالعاب`,
+"description": `فيها لعبة جرئة او حقيقة`,
 "rowId": `${prefix}gamemenu`
 },
 {
@@ -1427,7 +1427,7 @@ DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}
 break
 case 'abcde':
 
-reply('damn gay, really gay, wow, no one wants to play with him bro, its unclean because he is gay 🗿')
+reply('احبك 🦦💙')
 break
 
 //══════════[ RENT DLL ]══════════//
@@ -1462,7 +1462,7 @@ give credit too / add in at tqtq
 --> Xeon*/
 
       case 'mediafire':
-        if (args.length < 1) return reply('Where is the link? ')
+        if (args.length < 1) return reply('وين الرابط؟ ')
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         reply(mess.wait)
         teks = args.join(' ')
@@ -1474,7 +1474,7 @@ Size : ${res[0].size}
 Link : ${res[0].link}
 
 Please Choose Whether Document, Audio or Video Below`
-        sendButMessage(from, result, `*Doge Bot*`, [
+        sendButMessage(from, result, `*Jiraya Bot*`, [
           {
             buttonId: `${prefix}fire ${teks}`,
             buttonText: {
@@ -1499,7 +1499,7 @@ Please Choose Whether Document, Audio or Video Below`
         ]);
         break;
               case 'fire':
-        if (args.length < 1) return reply('Where is the link? ')
+        if (args.length < 1) return reply('وين الرابط؟ ')
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
@@ -1508,7 +1508,7 @@ Please Choose Whether Document, Audio or Video Below`
         sendFileFromUrl(res[0].link, document, { mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
         break
               case 'fire1':
-        if (args.length < 1) return reply('Where is the link? ')
+        if (args.length < 1) return reply('وين الرابط؟ ')
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
@@ -1517,7 +1517,7 @@ Please Choose Whether Document, Audio or Video Below`
         sendFileFromUrl(res[0].link, video, { quoted: mek, mimetype: 'video/mp4', filename: res[0].output })
         break
               case 'fire2':
-        if (args.length < 1) return reply('Where is the link? ')
+        if (args.length < 1) return reply('وين الرابط؟ ')
         if (!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
         teks = args.join(' ')
         res = await mediafireDl(teks)
@@ -1686,11 +1686,11 @@ bo = args.join(" ")
 reply(mess.wait)
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=KingOfBear`)
 thmb = await getBuffer(ini.thumb)
-ply1 =`*Title:* ${ini.title}\n*Channel:* ${ini.channel}\n*View:* ${ini.views}\n*Publish Time:* ${ini.published}`
-ply2 =`Please Select Media Below`
+ply1 =`*العنوان:* ${ini.title}\n*القناة:* ${ini.channel}\n*مشاهداته:* ${ini.views}\n*وقت نزوله:* ${ini.published}`
+ply2 =`اختر اذا تبيه فيديو ولا اغنية`
 but = [
-{ buttonId: `${prefix}mp3 ${args.join(" ")}`, buttonText: { displayText: 'MUSIC 🎵' }, type: 1 },
-{ buttonId: `${prefix}mp4 ${args.join(" ")}`, buttonText: { displayText: 'VIDEO 📽️' }, type: 1 }
+{ buttonId: `${prefix}mp3 ${args.join(" ")}`, buttonText: { displayText: '🎵 اغنية' }, type: 1 },
+{ buttonId: `${prefix}mp4 ${args.join(" ")}`, buttonText: { displayText: '📽️ فيديو' }, type: 1 }
 ]
 sendButLocation(from, ply1, ply2, thmb, but)
 break
@@ -1699,7 +1699,7 @@ reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video�` })
+DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `مشاهدة ممتعة 💙�` })
 break
 case 'mp3':
 reply(mess.wait)
@@ -1710,7 +1710,7 @@ DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: true, quo
 break
 case 'ytmp3':
 
-if (args.length < 1) return reply("Where is the link?")
+if (args.length < 1) return reply("وين الرابط؟")
 url = args.join(' ')
 anump3 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=${dhakey}`)
 ytmp3 = await getBuffer(anump3.result.url)
@@ -1719,7 +1719,7 @@ DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
 case 'ytmp4':
 
-if (args.length < 1) return reply("Where is the link?")
+if (args.length < 1) return reply("وين الرابط؟")
 url = args.join(' ')
 anump4 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp4?url=${url}&apikey=${dhakey}`)
 ytmp4 = await getBuffer(anump4.result.url)
@@ -1883,37 +1883,37 @@ just give credit / add in tqtq
                    case 'fox':  
                    anufox= await fetchJson(`https://some-random-api.ml/img/fox`)
                    anu1 = await getBuffer(anufox.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
                    case 'dog':  
                    anudog = await fetchJson(`https://some-random-api.ml/img/dog`)
                    anu1 = await getBuffer(anudog.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
                    case 'cat':
                    anucat = await fetchJson(`https://some-random-api.ml/img/cat`)
                    anu1 = await getBuffer(anucat.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
                    case 'panda':  
                    anupanda = await fetchJson(`https://some-random-api.ml/img/panda`)
                    anu1 = await getBuffer(anupanda.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
                    case 'panda1':  
                    anupandao = await fetchJson(`https://some-random-api.ml/img/red_panda`)
                    anu1 = await getBuffer(anupandao.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
                    case 'bird': 
                    anubird = await fetchJson(`https://some-random-api.ml/img/birb`)
                    anu1 = await getBuffer(anubird.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
                    case 'koala':  
                    anukoala = await fetchJson(`https://some-random-api.ml/img/koala`)
                    anu1 = await getBuffer(anukoala.link)
-                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `Here you go!`, quoted: mek})
+                   DogeXeonOP.sendMessage(from, anu1, image, {caption: `ها انت ذا 🦦`, quoted: mek})
                    break
 case 'ppcp':
 case 'ppcouple':
@@ -2217,7 +2217,7 @@ if (!isNsfw) return reply(mess.only.nsfw)
 reply(mess.wait)
 get_result = await getBuffer(`${porn1}/api/bokep?apikey=RakuKeyTod`)
 pll = `Here u go my friend! dont forget to masterbate, okay?😂`
-sendButVideo(from, pll, `*Doge Bot*`, get_result, [      
+sendButVideo(from, pll, `*Jiraya Bot*`, get_result, [      
 {
 buttonId: `${prefix+command}`,
 buttonText: {
@@ -2330,7 +2330,7 @@ just give credit / add in tqtq
                     if (args.length == 0) return reply(`Example: ${prefix + command} Xeon`)
                     ini_txt = args.join(" ")
                     getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
-                        DogeXeonOP.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Here you go!`, quoted : mek}) 
+                        DogeXeonOP.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `ها انت ذا 🦦`, quoted : mek}) 
                     })
                     break
 case 'blackpink':
@@ -2450,7 +2450,7 @@ case '3ddeepseametal':
 case 'leddisplayscreen':
 case 'wonderfulgraffitiart':
 
-if (args.length < 1) return reply(`*Where is the text?*\n_Example : ${prefix + command} your name_`) 
+if (args.length < 1) return reply(`*وين الكتابة يخي؟*\n_Example : ${prefix + command} your name_`) 
 teks = args.join(" ")
 reply(mess.wait)
 anuapidhani = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/${command}?apikey=${dhakey}&text=${teks}`)
@@ -2459,7 +2459,7 @@ DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '! ها أنت �
 break
 case 'hartatahta': 
 
-if (args.length < 1) return reply(`*Wher is the text?*\n_Example : ${prefix + command} your name_`) 
+if (args.length < 1) return reply(`*وين الكتابة يخي is the text?*\n_Example : ${prefix + command} your name_`) 
 teks = args.join(" ")
 reply(mess.wait)
 harta = await getBuffer(`https://apidhani.herokuapp.com/api/maker/harta-tahta?apikey=${dhakey}&text=${teks}`)
@@ -2804,7 +2804,7 @@ members_ids.push(mem.jid)
 vcard2 = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
 + `FN:${ownername}\n`
-+ `ORG: Owner Of Doge Bot ;\n`
++ `ORG: Owner Of Jiraya Bot ;\n`
 + `TEL;type=CELL;type=VOICE;waid=${owner}:${owner}\n`
 + 'END:VCARD'.trim()
 DogeXeonOP.sendMessage(from, {displayName: `The owner ${botname}`, vcard: vcard2}, contact, 
@@ -3144,7 +3144,7 @@ reply(`*🐧HERE IS YOUR RANDOM STYLISH NAME🐧*\n\n${anuscn.result}`)
 break
 case 'ssweb':
 case 'ss':
-if (args.length < 1) return reply('Where is the url?')
+if (args.length < 1) return reply('وين الرابط؟')
 teks = q
 anussweb = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${teks}`)
 buff = await getBuffer(anussweb.screenshot)
@@ -3350,7 +3350,7 @@ media = await DogeXeonOP.downloadAndSaveMediaMessage(encmediatoimg)
 ran = getRandom('.png')
 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
-if (err) return reply('Failed, when converting sticker to image')
+if (err) return reply('فشل تحويل الملصق إلى صورة')
 buffer = fs.readFileSync(ran)
 DogeXeonOP.sendMessage(from, buffer, image, {quoted: mek, caption: 'Here'})
 fs.unlinkSync(ran)
@@ -3443,7 +3443,7 @@ case 'ttp4':
 				case 'ttp':  
 				case 'attp':
             
-					if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp DogeBot`)
+					if (!c) return reply(`وين الكتابة يخي؟\nExample :\n${prefix}attp DogeBot`)
 					atetepe12 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
 					DogeXeonOP.sendMessage(from, atetepe12, sticker, { quoted: mek })
 					break
@@ -3571,8 +3571,8 @@ case 'ملصقي':
 							reply(`Send picture/video with caption ${prefix}stickerwm name|author or image/video tags that have been sent\nNote : Maximum video duration is 10 seconds`)
 						}
 						break
-case 'semoji':
-			if (args === 0) return reply('Where is the emoji?')   
+case 'ايموجي':
+			if (args === 0) return reply('وين الايموجي؟')   
 		   aku4 = args.join(' ')
            emoji.get(`${aku4}`).then(emoji => {
            link = `${emoji.images[10].url}`
@@ -3776,14 +3776,14 @@ ganteng = body.slice(1)
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 					DogeXeonOP.sendMessage(from, 'Question : *'+ganteng+'*\n\nAnswer : '+ teng+'%', text, { quoted: mek })
 					break
-		case 'كم يحبني':
+		case 'يحبني':
 					// source code by xeon⛔
 cantik = body.slice(1)
 					const can =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
 					DogeXeonOP.sendMessage(from, 'السؤال : *'+cantik+'*\n\nAnswer : '+ tik+'%', text, { quoted: mek })
 					break
-		case 'كم يحبني':
+		case 'يحبني':
 					// source code by xeon⛔
 watak = body.slice(1)
 					const wa =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
@@ -3864,7 +3864,7 @@ watak = body.slice(1)
     "shout you bastard in front of your mom/papa",
     "change the name to i am idiot for 24 hours",
     "slap urself firmly and send the sound of slap through voice note😂",
-    "say i love the bot owner xeon through voice note",
+    "say i love the bot owner Jiraya through voice note",
     "send your gf/bf pic here",
     "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
     "breakup with your best friend for 5hrs without telling him/her that its a dare",
@@ -3953,7 +3953,7 @@ watak = body.slice(1)
     "Mention the incident that makes you hurt that you still remember",
     "what achievements have you got this year?",
     "what was your worst habit at school?",
-    "do you love the bot creator, xeon?ðŸ¦„",
+    "do you love the bot creator, Jiraya?",
     "have you ever thought of taking revenge from ur teacher?",
     "do you like current prime minister of ur country",
     "you non veg or veg",
@@ -3983,19 +3983,19 @@ watak = body.slice(1)
 case 'bc':
              
              if (!isOwner && !mek.key.fromMe) return  reply(mess.only.owner)
-             if (args.length < 1) return reply('Where is the text?')
+             if (args.length < 1) return reply('وين الكتابة يخي؟')
              anu100 = await DogeXeonOP.chats.all()
              if (isMedia && !DogeXeonOP.message.videoMessage || isQuotedImage) {
              const encmediaboomb = isQuotedImage ? JSON.parse(JSON.stringify(DogeXeonOP).replace('quotedM','m')).message.extendedTextMessage.contextInfo : DogeXeonOP
              bc100 = await DogeXeonOP.downloadMediaMessage(encmediaboomb)
              for (let _ of anu100) {
-             DogeXeonOP.sendMessage(_.jid, bc100, image, {quoted: fgi, caption: `*「 Doge Bot Broadcast 」*\n\n${body.slice(4)}`})
+             DogeXeonOP.sendMessage(_.jid, bc100, image, {quoted: fgi, caption: `*「 Jiraya Bot Broadcast 」*\n\n${body.slice(4)}`})
 }
-             reply('Broadcast success')
+             reply('تم اذاعة')
              } else {
              for (let _ of anu100) {
              DogeXeonOP.sendMessage(_.jid, 
-			{"contentText": `*「 DOGE BOT BROADCASTING MESSAGE 」*\n\n${body.slice(4)}`,
+			{"contentText": `*「 Jiraya BOT BROADCASTING MESSAGE 」*\n\n${body.slice(4)}`,
 			"footerText": `${tanggal}`,
 			"buttons": [
 			{"buttonId": `${prefix}menu`,
@@ -4007,7 +4007,7 @@ case 'bc':
 			jpegThumbnail: fakeimage,
 			}}, MessageType.buttonsMessage )
 }
-             reply('Broadcast success')
+             reply('تم اذاعة')
 }
              break
 case 'bc2':
@@ -4021,44 +4021,44 @@ buff = await DogeXeonOP.downloadMediaMessage(encmedia12345)
 for (let _ of anubc2) {
 DogeXeonOP.sendMessage(_.jid, buff, image, { viewOnce:true, caption: `${body.slice(4)}`})
 }
-reply(`Broadcast success ${body.slice(4)}`)
+reply(`تم اذاعة ✓${body.slice(4)}`)
 } else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
 const encmediaki = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 buff = await DogeXeonOP.downloadMediaMessage(encmediaki)
 for (let _ of anubc2) {
 DogeXeonOP.sendMessage(_.jid, buff, video, { viewOnce:true, caption: `${body.slice(4)}`})
 }
-reply(`Broadcast success ${body.slice(4)}`)
+reply(`تم اذاعة ✓${body.slice(4)}`)
 } else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
 const encmediadirk = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 buff = await DogeXeonOP.downloadMediaMessage(encmediadirk)
 for (let _ of anubc2) {
 DogeXeonOP.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: finv, contextInfo: { forwardingScore: 508, isForwarded: true}, caption: `${body.slice(4)}` })
 }
-reply(`Broadcast success ${body.slice(4)}`)
+reply(` تم اذاعة✓${body.slice(4)}`)
 } else {
 for (let _ of anubc2) {
 sendMess(_.jid, `Bot Broadcast\n\n${body.slice(4)}`)
 }
-reply(`Broadcast Success`)
+reply(`تم اذاعة`)
 }
 break
 case 'bcgc':
 
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
-if (args.length < 1) return reply('Where is the text? ?')
+if (args.length < 1) return reply('وين الكتابة يخي؟ ?')
 if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 const encmediabcgc = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 bcgc = await DogeXeonOP.downloadMediaMessage(encmediabcgc)
 for (let _ of groupMembers) {
-DogeXeonOP.sendMessage(_.jid, bcgc, image, { caption: `*「 DOGE BOT BROADCAST 」*\n*Group* : ${groupName}\n\n${body.slice(6)}` })
+DogeXeonOP.sendMessage(_.jid, bcgc, image, { caption: `*「 Jiraya BOT BROADCAST 」*\n*Group* : ${groupName}\n\n${body.slice(6)}` })
 }
 reply('')
 } else {
 for (let _ of groupMembers) {
-sendMess(_.jid, `*「 DOGE BOT BROADCAST 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
+sendMess(_.jid, `*「 Jiraya BOT BROADCAST 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
 }
-reply('Success broadcast group')
+reply('تم مجموعة البث')
 }
 break
 case 'clearall':
@@ -4086,7 +4086,7 @@ if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
 if (args.length < 1) return reply('The text?')
 iyek = body.slice(8)
 DogeXeonOP.setStatus(`${iyek}`)
-reply(`Success changing bio to ${body.slice(8)}`)
+reply(`تم✓changing bio to ${body.slice(8)}`)
 break
 case 'setbotname':
 
@@ -4094,7 +4094,7 @@ if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
 if (args.length < 1) return reply('Teksnya?')
 anuoke112 = body.slice(11)
 DogeXeonOP.updateProfileName(anuoke112)
-reply(`Success in changing the name of the bot to ${body.slice(11)}`)
+reply(`تم✓in changing the name of the bot to ${body.slice(11)}`)
 break
 case 'public':
 if (!mek.key.fromMe && !isOwner) return reply('Luh Siapa Sih Bang ?')
@@ -4328,7 +4328,7 @@ if (Number(oi2) >= 50) return reply('Max 50!')
 						anucgc.push(mentioned[i])
                     }
 					DogeXeonOP.groupCreate(argz[0], anucgc)
-					reply(`Success in creating a group ${argz[0]}`)
+					reply(`تم✓in creating a group ${argz[0]}`)
                 }
 				break
 case 'getbio':
@@ -4379,12 +4379,12 @@ if ((args[0]) === 'on') {
 if (isNsfw) return reply('*nsfw is active !!*')
 _nsfw.push(from)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(_nsfw))
-reply(`\`\`\`Success ✅, Activating the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Activating the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if ((args[0]) === 'off') {
 if (!isNsfw) return reply('*nsfw is already off before !!*')
 _nsfw.splice(from, 1)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(_nsfw))
-reply(`\`\`\`Success ✅, Disabling the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Disabling the nsfw feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4398,12 +4398,12 @@ if ((args[0]) === 'on') {
 if (isWelkom) return reply('*welcome is active !!*')
 _welkom.push(from)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`Success ✅, Activating the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Activating the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if ((args[0]) === 'off') {
 if (!isWelkom) return reply('*welcome has been off before !!*')
 _welkom.splice(from, 1)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`Success ✅, Disabling the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Disabling the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4418,12 +4418,12 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiLink) return reply(`Already active`)
 _antilink.push(from)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`تم ✅, تفعيل مضاد الروابط فالمجموعة\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓ ✅, تفعيل مضاد الروابط فالمجموعة\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantilink = _antilink.indexOf(from)
 _antilink.splice(anuantilink, 1)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`Success ✅, Disabling the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Disabling the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4438,12 +4438,12 @@ if (args[0].toLowerCase() === 'on'){
 if (isAntiVirtex) return reply(`Already active`)
 _antivirtex.push(from)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Success ✅, Activating the antivirtex feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Activating the antivirtex feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else if (args[0].toLowerCase() === 'off'){
 let anuantivtex = _antivirtex.indexOf(from)
 _antivirtex.splice(anuantivtex, 1)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Success ✅, Disabling the antivirus feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, Disabling the antivirus feature in the group\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4602,7 +4602,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateSubject(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Renamed the group to\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
+DogeXeonOP.sendMessage(from, `\`\`\`تم✓✅, Renamed the group to\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
 break
 case 'setdesc':
 
@@ -4610,7 +4610,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateDescription(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`Success ✅, Changing group description\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
+DogeXeonOP.sendMessage(from, `\`\`\`تم✓✅, Changing group description\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
 break
 case 'setgrouppp':
 case 'setgruppp':
@@ -4830,7 +4830,7 @@ case 'ownergroup':
 
 if (!isGroup) return reply(mess.only.group)
 options = {
-text: `Here is the group owner : https://wa.me/${from.split("-")[0]}`,
+text: `هذا هو مؤسس القروب : https://wa.me/${from.split("-")[0]}`,
 contextInfo: { mentionedJid: [from] }
 }
 DogeXeonOP.sendMessage(from, options, text, { quoted: mek })
