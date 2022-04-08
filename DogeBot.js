@@ -503,7 +503,7 @@ for (let anji of setik){
             const checkId = getLevelingId(sender)
             try {
                 if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
-                const amountXp = Math.floor(Math.random() * 10) + 100
+                const amountXp = Math.floor(Math.random() * 100) + 100
                 const requiredXp = 5000 * (Math.pow(2, currentLevel) - 1)
                 var getLevel = getLevelingLevel(sender)
                 addLevelingXp(sender, amountXp)
@@ -577,7 +577,7 @@ switch (command) {
 //══════════[ MENU FEATURES ]══════════//
 
 case 'menu':
-case 'اوامر':
+case 'جيرايا':
 
 timestampe = speed();
 latensie = speed() - timestampe
@@ -615,7 +615,7 @@ _بوت جيرايا الافضل_
 _اتمنى ${prefix}افيدكم_`
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'الاوامر 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'جيرايا 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'المطور 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
-case 'command':
+case 'جيرايا':
 
 listMsg = {
 buttonText: 'الاوامر 📃',
@@ -734,7 +734,7 @@ ${gaya2} ${prefix}group _open / closed_
 ${gaya2} ${prefix}promote _@tag / reply_
 ${gaya2} ${prefix}demote _@tag / reply_
 ${gaya2} ${prefix}add _916xx_
-${gaya2} ${prefix}طرد _@tag / reply_
+${gaya2} ${prefix}kick _@tag / reply_
 ${gaya2} ${prefix}getdesc
 ${gaya2} ${prefix}setpp _reply_
 ${gaya2} ${prefix}setdesc _text_
@@ -743,7 +743,7 @@ ${gaya2} ${prefix}getbio _reply target_
 ${gaya2} ${prefix}getdp _tag_
 ${gaya2} ${prefix}getname _reply target_
 ${gaya2} ${prefix}sticker (ملصق)
-${gaya2} ${prefix}فعالية _text_
+${gaya2} ${prefix}hidetag _text_
 ${gaya2} ${prefix}contact _916x|Name_
 ${gaya2} ${prefix}contag _@tag|Name_
 ${gaya2} ${prefix}sticktag _Reply Sticker_
@@ -752,7 +752,7 @@ ${gaya2} ${prefix}creategroup _Name|tag_
 ${gaya2} ${prefix}promoteall
 ${gaya2} ${prefix}demoteall
 ${gaya2} ${prefix}listadmin
-${gaya2} ${prefix}اطلع
+${gaya2} ${prefix}leave
 ${gaya2} ${prefix}grupowner
 ${gaya2} ${prefix}groupinfo
 ${gaya2} ${prefix}grouplink
@@ -3502,7 +3502,7 @@ case 'زرف':
 							fs.unlinkSync(`./sticker/takestick_${sender}.exif`)
 						})
 						break
-case 'stickerwm':
+case 'ملصقي':
 					case 'swm':
 						if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 							ppp = `${args.join(' ')}`
@@ -3634,7 +3634,7 @@ fs.unlinkSync(ran)
 .toFormat('webp')
 .save(ran)
 } else {
-reply(`Send a picture with a caption ${prefix}sticker\nVideo Sticker Duration 1-9 Seconds`)
+reply(`أرسل صورة ${prefix}ملصق\nفيديو مدة الملصق 1-9 ثواني`)
 }
 break
 case 'stcmemepic': case 'stickermemepic':
@@ -3783,7 +3783,7 @@ cantik = body.slice(1)
 					const tik = can[Math.floor(Math.random() * can.length)]
 					DogeXeonOP.sendMessage(from, 'السؤال : *'+cantik+'*\n\nAnswer : '+ tik+'%', text, { quoted: mek })
 					break
-		case 'beautycheck':
+		case 'كم يحبني':
 					// source code by xeon⛔
 watak = body.slice(1)
 					const wa =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
