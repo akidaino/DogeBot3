@@ -25,7 +25,7 @@ nocache('./DogeBot.js', module => console.log(`${module} telah di update!`))
 const starts = async (DogeXeonOP = new WAConnection()) => {
     DogeXeonOP.logger.level = 'warn'
     DogeXeonOP.version = [2, 2142, 12]
-    console.log(color(figlet.textSync('Doge Bot', {
+    console.log(color(figlet.textSync('Jiraya Bot', {
 		font: 'Standard',
 		horizontalLayout: 'default',
 		vertivalLayout: 'default',
@@ -35,14 +35,14 @@ const starts = async (DogeXeonOP = new WAConnection()) => {
 	console.log(color('\n> YT CHANNEL: Jiraya ','silver'))
 console.log(color('> GITHUB: Jiraya ','silver'))
 console.log(color('> WA NUMBER: +34613110267 ','silver'))
-console.log(color('  Xeon Bot Inc. 2022','mediumseagreen'))
+console.log(color('  Jiraya Bot Inc. 2022','mediumseagreen'))
     console.log(color('<>','red'), color('I Wrote This Script By Myself!\nNote, The Script Is Encrypted, So You Wont Be Able To Recode, If You Wish To Buy Decrypted Script Contact The Developer', 'yellow'))
     console.log(color('<>','red'), color('Source Code Version: 3.0', 'aqua'))
     console.log(color('<>','red'), color('But? Error? Suggestion? Visit Here:', 'aqua'), color('https://wa.me/34613110267'))
-    console.log(color('[DOGE BOT]'), color('Doge Bot Is Online', 'aqua'))
+    console.log(color('[Jiraya BOT]'), color('Jiraya Bot Is Online', 'aqua'))
     console.log(color('[DEV]', 'cyan'), color('Welcome Back Owner! Hope You Doing Well~', 'magenta'))
-    console.log(color('<>','red'), color('Thanks For Using Doge Bot', 'white'))
-	DogeXeonOP.browserDescription = [ 'Subscribe Xeon', 'chrome', '3.0' ]
+    console.log(color('<>','red'), color('Thanks For Using Jiraya Bot', 'white'))
+	DogeXeonOP.browserDescription = [ 'Subscribe Jiraya', 'chrome', '3.0' ]
     DogeXeonOP.on('qr', () => {
         console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code in only 20 seconds !!'))
     })
