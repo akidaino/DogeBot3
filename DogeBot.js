@@ -642,7 +642,7 @@ rows: [
 },
 {
 "title": "قائمة الالعاب",
-"description": `فيها لعبة جرئة او حقيقة`,
+"description": `فيها لعبة جرأة او حقيقة`,
 "rowId": `${prefix}gamemenu`
 },
 {
@@ -726,38 +726,37 @@ case 'groupmenu':
 menu =
 `*「 قائمة المجموعة 」*
 
-${gaya2} ${prefix}antilink _on / off_
-${gaya2} ${prefix}antivirtex _on / off_
-${gaya2} ${prefix}welcome _on / off_
-${gaya2} ${prefix}nsfw _on / off_
-${gaya2} ${prefix}group _open / closed_
-${gaya2} ${prefix}promote _@tag / reply_
-${gaya2} ${prefix}demote _@tag / reply_
-${gaya2} ${prefix}add _916xx_
-${gaya2} ${prefix}kick _@tag / reply_
-${gaya2} ${prefix}getdesc
-${gaya2} ${prefix}setpp _reply_
-${gaya2} ${prefix}setdesc _text_
-${gaya2} ${prefix}setname _text_
-${gaya2} ${prefix}getbio _reply target_
-${gaya2} ${prefix}getdp _tag_
-${gaya2} ${prefix}getname _reply target_
-${gaya2} ${prefix}sticker (ملصق)
-${gaya2} ${prefix}hidetag _text_
-${gaya2} ${prefix}contact _916x|Name_
-${gaya2} ${prefix}contag _@tag|Name_
-${gaya2} ${prefix}sticktag _Reply Sticker_
-${gaya2} ${prefix}totag _Reply Image_
-${gaya2} ${prefix}creategroup _Name|tag_
-${gaya2} ${prefix}promoteall
-${gaya2} ${prefix}demoteall
-${gaya2} ${prefix}listadmin
-${gaya2} ${prefix}leave
-${gaya2} ${prefix}grupowner
-${gaya2} ${prefix}groupinfo
-${gaya2} ${prefix}grouplink
-${gaya2} ${prefix}onlinelist
-${gaya2} ${prefix}resetgrouplink`
+${gaya2} ${prefix}مضاد الروابط (antilink on / off)
+${gaya2} ${prefix}مضاد الفرتكس (antivirtex on / off)
+${gaya2} ${prefix}الترحيب (welcome on / off)
+${gaya2} ${prefix}فتح /اغلاء قروب  (group open / closed)
+${gaya2} ${prefix}ترقية (promote @tag / reply)
+${gaya2} ${prefix}تخفيض (demote @tag / reply)
+${gaya2} ${prefix}دخل (مثال : .دخل 972557255985)
+${gaya2} ${prefix}طرد ( منشن الي تبي تطرد)
+${gaya2} ${prefix}وصف القروب (getdesc)
+${gaya2} ${prefix}تغيير صورة القروب (setpp reply)
+${gaya2} ${prefix}تغيير وصف لقروب (setdesc text)
+${gaya2} ${prefix}تغيير اسم القروب (setname text)
+${gaya2} ${prefix}ا (getbio reply target)
+${gaya2} ${prefix}ا (getdp tag)
+${gaya2} ${prefix}ا (getname reply target)
+${gaya2} ${prefix}ملصق
+${gaya2} ${prefix}فعالية
+${gaya2} ${prefix}رقم (contact 916x|Name)
+${gaya2} ${prefix}رقم منشن (contag @tag|Name)
+${gaya2} ${prefix}منشن بملصق (sticktag Reply Sticker)
+${gaya2} ${prefix}منشن بصورة (totag Reply Image)
+${gaya2} ${prefix}انشاء قروب (creategroup Name|tag)
+${gaya2} ${prefix}ترقية الكل (promoteall)
+${gaya2} ${prefix}تخفيض الكل (demoteall)
+${gaya2} ${prefix}قائمة المشرفين (listadmin)
+${gaya2} ${prefix}اطلع ( اخراج البوت)
+${gaya2} ${prefix}مطور القروب (grupowner)
+${gaya2} ${prefix}معلومات القروب (groupinfo)
+${gaya2} ${prefix}رابط القروب (grouplink)
+${gaya2} ${prefix}قائمة المتصلين (onlinelist)
+${gaya2} ${prefix}اعادة تعين رابط قروب (resetgrouplink)`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
@@ -937,7 +936,7 @@ menu =
 `*「 قائمة الالعاب 」*
 
 ${gaya2} ${prefix}حقيقة
-${gaya2} ${prefix}جرئة`
+${gaya2} ${prefix}جرأة`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randomimage':
@@ -1225,7 +1224,8 @@ ${gaya2} ${prefix}معرق
 ${gaya2} ${prefix}كيوت
 ${gaya2} ${prefix}ظريف
 ${gaya2} ${prefix}تيكن
-${gaya2} ${prefix}كم يحبني [منشن]`
+${gaya2} ${prefix}يكرهني [منشن]
+${gaya2} ${prefix} يحبني [منشن]`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'soundmenu':
@@ -1448,7 +1448,7 @@ case 'payment':
 gambar = fs.readFileSync('./media/doged.jpg')
 menunya = `*「 سلام عليكم 」*
 
-• شسمه : _غير متاح للشراء حالية 🐧_`
+• شسمه : _غير متاح للشراء حاليا 🐧_`
 but = [
 { buttonId: `${prefix}menu`, buttonText: { displayText: '🗃️ الاوامر' }, type: 1 },
 { buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 }
@@ -1680,7 +1680,7 @@ her = `*Hero Details ${body.slice(12)}*
 *Story* : ${res.background_story}`
 reply(her)
 break
-              case 'play':
+              case 'شغل':
 if (args.length ==0)return reply('Whats the title of the song?')
 bo = args.join(" ")
 reply(mess.wait)
@@ -2128,7 +2128,7 @@ break
                  randIndex = Math.floor(Math.random() * jsonData.length);
                  randKey = jsonData[randIndex];
                  swordartonline = await getBuffer(randKey.result)
-                 DogeXeonOP.sendMessage(from, swordartonline, image, {quoted: mek, caption: 'swort art online\nDogeBot'})
+                 DogeXeonOP.sendMessage(from, swordartonline, image, {quoted: mek, caption: 'swort art online\nJirayaBot'})
 				 break
 				case 'hsdxd':
 				reply(mess.wait)
@@ -3443,7 +3443,7 @@ case 'ttp4':
 				case 'ttp':  
 				case 'attp':
             
-					if (!c) return reply(`وين الكتابة يخي؟\nExample :\n${prefix}attp DogeBot`)
+					if (!c) return reply(`وين الكتابة يخي؟\nExample :\n${prefix}attp JirayaBot`)
 					atetepe12 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
 					DogeXeonOP.sendMessage(from, atetepe12, sticker, { quoted: mek })
 					break
@@ -3468,7 +3468,7 @@ case 'memegenerator': case 'memegen':{
 										}
 									break
  	case 'stickermeme': case 'memesticker': case 'memestick': case 'stickmeme': case 'stcmeme': case 'smeme':{
-						if (args.length < 1) return reply(`Send orders *${prefix + command}* DogeBot`)
+						if (args.length < 1) return reply(`Send orders *${prefix + command}* JirayaBot`)
 									if (q.includes('|')) return reply(`Reply to an image with a caption, For Example *${prefix + command}* Xeon`)
 									try {
 										if (!isQuotedImage) return reply(`Reply to an image!`)
@@ -3663,7 +3663,7 @@ break
 case 'rate':
 				case 'تشبيك':
 					rate = body.slice(1)
-					const ra =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const ra =['ميؤوس منكم 🤣💔 1','ميؤوس منكم 🤣💔 2','ميؤوس منكم 🤣💔 3','ميؤوس منكم 🤣💔 4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const te = ra[Math.floor(Math.random() * ra.length)]
 					DogeXeonOP.sendMessage(from, 'تست نشوف : *'+rate+'*\n\nنسبة الحب المتوقعة : '+ te+'%', text, { quoted: mek})
 					break
@@ -3681,7 +3681,7 @@ case 'rate':
 					break
          			  case 'هل':
 					apakah = body.slice(1)
-					const apa =['نعم','لا','يمكن','مدري صراحة','اتوقعععع يب 🐧🤣']
+					const apa =['نعم','لا','اسال ثالث منشن','شرايك انت ؟','اذلف مدري 🗿','هو شوف على حسب 🐧','يمكن','مدري صراحة','اتوقعععع يب 🐧🤣']
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 					DogeXeonOP.sendMessage(from, 'السؤال : *'+apakah+'*\n\nالجواب : '+ kah, text, { quoted: mek })
 					break
@@ -3754,12 +3754,12 @@ case 'غبي':
 					const nge = sang[Math.floor(Math.random() * sang.length)]
 					DogeXeonOP.sendMessage(from, 'Question : *'+sange+'*\n\nAnswer: '+ nge+'%', text, { quoted: mek })
 					break
-                case 'gaycheck':
+                case 'يكرهني':
 					// source code by xeon⛔
                   gayy = body.slice(1)
 					const gay =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const yag = gay[Math.floor(Math.random() * gay.length)]
-					DogeXeonOP.sendMessage(from, 'Question : *'+gayy+'*\n\nAnswer : '+ yag+'%', text, { quoted: mek })
+					DogeXeonOP.sendMessage(from, 'السؤال : *'+gayy+'*\n\nالجواب : '+ yag+'%', text, { quoted: mek })
 					break
                 case 'lesbicheck':
                 case 'lesbiancheck':
@@ -3792,7 +3792,7 @@ watak = body.slice(1)
 				        break
 				
 //══════════[ GAME FEATURES ]══════════//
-       case 'جرئة':
+       case 'جرأة':
               const dare =[
     "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
     "spill people who make you pause",
@@ -3877,7 +3877,7 @@ watak = body.slice(1)
      "send abusive words in any grup, excepting this grup, and send screenshot proof here"
 ]
               const der = dare[Math.floor(Math.random() * dare.length)]
-              buffer = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
+              buffer = await getBuffer(`https://i.ibb.co/17Gzvp9/Pics-Art-04-09-03-30-04.jpg`)
               DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*DARE*_\n'+ der })
               break
                             break
@@ -3974,7 +3974,7 @@ watak = body.slice(1)
     "do you play pubg, if you then send ur id number"
 ]
               const trut = truth[Math.floor(Math.random() * truth.length)]
-              buffer = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
+              buffer = await getBuffer(`https://i.ibb.co/17Gzvp9/Pics-Art-04-09-03-30-04.jpg`)
               DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*TRUTH*_\n'+ trut })
               break
               
