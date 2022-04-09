@@ -726,37 +726,33 @@ case 'groupmenu':
 menu =
 `*「 قائمة المجموعة 」*
 
-${gaya2} ${prefix}مضاد الروابط (antilink on / off)
-${gaya2} ${prefix}مضاد الفرتكس (antivirtex on / off)
-${gaya2} ${prefix}الترحيب (welcome on / off)
-${gaya2} ${prefix}فتح /اغلاء قروب  (group open / closed)
-${gaya2} ${prefix}ترقية (promote @tag / reply)
-${gaya2} ${prefix}تخفيض (demote @tag / reply)
-${gaya2} ${prefix}دخل (مثال : .دخل 972557255985)
-${gaya2} ${prefix}طرد ( منشن الي تبي تطرد)
-${gaya2} ${prefix}وصف القروب (getdesc)
-${gaya2} ${prefix}تغيير صورة القروب (setpp reply)
-${gaya2} ${prefix}تغيير وصف لقروب (setdesc text)
-${gaya2} ${prefix}تغيير اسم القروب (setname text)
-${gaya2} ${prefix}ا (getbio reply target)
-${gaya2} ${prefix}ا (getdp tag)
-${gaya2} ${prefix}ا (getname reply target)
+${gaya2} ${prefix}مضاد الروابط (antilink )
+${gaya2} ${prefix}مضاد الفرتكس (antivirtex)
+${gaya2} ${prefix}الترحيب (welcome )
+${gaya2} ${prefix}فتح /اغلاء 
+${gaya2} ${prefix}ترقية
+${gaya2} ${prefix}تخفيض 
+${gaya2} ${prefix}دخل
+${gaya2} ${prefix}طرد 
+${gaya2} ${prefix}وصف (قرائة وصف لقروب) 
+${gaya2} ${prefix}صورة( تغيير صورة قروب)
+${gaya2} ${prefix}وصفف (تغيير وصف لقروب)
+${gaya2} ${prefix}اسم (تغيير اسم القروب)
 ${gaya2} ${prefix}ملصق
 ${gaya2} ${prefix}فعالية
-${gaya2} ${prefix}رقم (contact 916x|Name)
-${gaya2} ${prefix}رقم منشن (contag @tag|Name)
-${gaya2} ${prefix}منشن بملصق (sticktag Reply Sticker)
-${gaya2} ${prefix}منشن بصورة (totag Reply Image)
-${gaya2} ${prefix}انشاء قروب (creategroup Name|tag)
+${gaya2} ${prefix}رقم
+${gaya2} ${prefix}تاج (منشن بصورة )
+${gaya2} ${prefix}تاج (منشن بملصق )
+${gaya2} ${prefix}انشاء قروب (creategroup)
 ${gaya2} ${prefix}ترقية الكل (promoteall)
 ${gaya2} ${prefix}تخفيض الكل (demoteall)
-${gaya2} ${prefix}قائمة المشرفين (listadmin)
+${gaya2} ${prefix}مشرفين
 ${gaya2} ${prefix}اطلع ( اخراج البوت)
-${gaya2} ${prefix}مطور القروب (grupowner)
-${gaya2} ${prefix}معلومات القروب (groupinfo)
-${gaya2} ${prefix}رابط القروب (grouplink)
-${gaya2} ${prefix}قائمة المتصلين (onlinelist)
-${gaya2} ${prefix}اعادة تعين رابط قروب (resetgrouplink)`
+${gaya2} ${prefix}مؤسس
+${gaya2} ${prefix}قروب
+${gaya2} ${prefix}رابط  
+${gaya2} ${prefix}متصل ( اعضاء اونلاين)
+${gaya2} ${prefix}اعادة (حذف رابط قروب)`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
@@ -4328,7 +4324,7 @@ if (Number(oi2) >= 50) return reply('Max 50!')
 						anucgc.push(mentioned[i])
                     }
 					DogeXeonOP.groupCreate(argz[0], anucgc)
-					reply(`تم✓in creating a group ${argz[0]}`)
+					reply(`تم✓انشاء قروب ${argz[0]}`)
                 }
 				break
 case 'getbio':
@@ -4423,7 +4419,7 @@ reply(`\`\`\`تم✓ ✅, تفعيل مضاد الروابط فالمجموعة\
 let anuantilink = _antilink.indexOf(from)
 _antilink.splice(anuantilink, 1)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`تم✓✅, Disabling the antilink feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, تعطيل مضاد الروابط\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply(`_Choose on or off_`)
 }
@@ -4448,33 +4444,33 @@ reply(`\`\`\`تم✓✅, Disabling the antivirus feature in the group\`\`\` *${g
 reply(`_Choose on or off_`)
 }
 break
-case 'gc': case 'group':
-buttonss = [{buttonId: `${prefix}opengc`, buttonText: {displayText: 'OPEN ⚙️'}, type: 1},{buttonId: `${prefix}closegc`, buttonText: {displayText: 'CLOSE ⚙️'}, type: 1}]
+case 'gc': case 'غف':
+buttonss = [{buttonId: `${prefix}opengc`, buttonText: {displayText: 'فتح ⚙️'}, type: 1},{buttonId: `${prefix}closegc`, buttonText: {displayText: 'اغلاق ⚙️'}, type: 1}]
 const bMess = {
-    contentText: 'OPEN/CLOSE\n\nGroup',
-    footerText: 'Please choose one',
+    contentText: 'اغلاق / فتح\n\nقروب',
+    footerText: 'اختر وحدة',
     buttons: buttonss,
     headerType: 1
 }
 await DogeXeonOP.sendMessage(from, bMess, MessageType.buttonsMessage, {quoted: mek})
 break
-					case 'opengc':
+					case 'فتح':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.group)
                    if (!isBotGroupAdmins) return sticNotAdmin(from)
-                   reply(`Successful opening group ${groupName}`)
+                   reply(`تم فتح قروب ${groupName}`)
 						DogeXeonOP.groupSettingChange(from, GroupSettingChange.messageSend, false)
 						break
-						case 'closegc':
+						case 'غلق':
 						if (!isGroup) return reply(mess.only.group)
 						if (!isGroupAdmins) return reply(mess.only.admin)
                    if (!isBotGroupAdmins) return sticNotAdmin(from)
-						reply(`Successfully closing the group ${groupName}`)
+						reply(`تم غلق قروب ${groupName}`)
 						DogeXeonOP.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					break
 case 'grouplink':
 case 'gruplink':
-case 'gclink':
+case 'رابط':
 case 'linkgroup':
 case 'linkgrup':
 case 'linkgc':
@@ -4482,10 +4478,10 @@ case 'linkgc':
 if (!isGroup) return reply(mess.only.group)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 linkgc = await DogeXeonOP.groupInviteCode(from)
-yeh = `https://chat.whatsapp.com/${linkgc}\n\n*${groupName}* group link`
+yeh = `https://chat.whatsapp.com/${linkgc}\n\n*${groupName}* رابط قروب`
 DogeXeonOP.sendMessage(from, yeh, text, { quoted: fgi })
 break
-case 'promote' :
+case 'ترقية' :
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4493,18 +4489,18 @@ if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag the target who wants to be an admin!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
-teks = 'Order received, you became an admin :\n'
+teks = 'منشن الي تبي ترقيه :\n'
 for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
 DogeXeonOP.groupMakeAdmin(from, mentioned)
 } else {
-mentions(`Order received, Promoted : @${mentioned[0].split('@')[0]} to an admin in *${groupMetadata.subject}*`, mentioned, true)
+mentions(`تم ترقية: @${mentioned[0].split('@')[0]} لمشرف في *${groupMetadata.subject}*`, mentioned, true)
 DogeXeonOP.groupMakeAdmin(from, mentioned)
 }
 break
-case 'demote' :
+case 'تخفيض' :
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4512,14 +4508,14 @@ if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag the admin you want to demote!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
-teks = 'Order received, you are not an admin anymore :\n'
+teks = 'منشن الي تبي تخفضه :\n'
 for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
 DogeXeonOP.groupDemoteAdmin(from, mentioned)
 } else {
-mentions(`Order received, Demoted : @${mentioned[0].split('@')[0]} to a member`, mentioned, true)
+mentions(`تم خفض : @${mentioned[0].split('@')[0]} لعضو في`, mentioned, true)
 DogeXeonOP.groupDemoteAdmin(from, mentioned)
 }
 break
@@ -4550,14 +4546,14 @@ case 'دخل' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (args.length < 1) return reply('Who wants to be added??')
-if (args[0].startsWith('08')) return reply('Use country code bro')
+if (args.length < 1) return reply('مين تبي تدخل؟')
+if (args[0].startsWith('08')) return reply('حط رمز الدولة')
 try {
 num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 DogeXeonOP.groupAdd(from, [num])
 } catch (e) {
-console.log('Error :', e)
-reply('Failed to add target, maybe because in private')
+console.log('خطأ :', e)
+reply('فشل ادخاله للمجموعه, يمكن حاط الدعوة مخصصه')
 }
 break
 case "طرد":
@@ -4569,7 +4565,7 @@ if (
 mek.message.extendedTextMessage === undefined ||
 mek.message.extendedTextMessage === null
 )
-return reply("Tag the target you want to kick!");
+return reply("منشن الشخص الي بدك تطرده!");
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid;
 if (mentioned.length > 1) {
 DogeXeonOP.groupRemove(from, mentioned);
@@ -4596,24 +4592,24 @@ members_id.push(mem.jid)
 }
 mentions(teks, members_id, true)
 break
-case 'setname':
+case 'اسم':
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateSubject(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`تم✓✅, Renamed the group to\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
+DogeXeonOP.sendMessage(from, `\`\`\`تم✓✅, تغير اسم المجموعه ل\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
 break
-case 'setdesc':
+case 'وصفف':
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 DogeXeonOP.groupUpdateDescription(from, `${body.slice(9)}`)
-DogeXeonOP.sendMessage(from, `\`\`\`تم✓✅, Changing group description\`\`\` *${groupMetadata.subject}* Became: *${body.slice(9)}*`, text, { quoted: fgi })
+DogeXeonOP.sendMessage(from, `\`\`\`تم✓✅, تغيير وصف القروب\`\`\` *${groupMetadata.subject}* ل: *${body.slice(9)}*`, text, { quoted: fgi })
 break
 case 'setgrouppp':
-case 'setgruppp':
+case 'صورة':
 case 'setpp':
 
 if (!isGroup) return reply(mess.only.group)
@@ -4626,7 +4622,7 @@ DogeXeonOP.updateProfilePicture(from, media)
 .then((res) => reply(jsonformat(res)))
 .catch((err) => reply(jsonformat(err)))
 } else {
-reply(`Send or tag an image with a caption ${prefix}setppgrup`)
+reply(`ارسل صورة وبحطها افتار قروب ${prefix}🐧`)
 }
 break
 case 'فعالية':
@@ -4658,7 +4654,7 @@ DogeXeonOP.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption:
 break
 case 'resetlinkgc':
 case 'resetlinkgroup':
-case 'resetlinkgrup':
+case 'اعادة':
 case 'revoke':
 case 'resetlink':
 case 'resetgrouplink':
@@ -4670,17 +4666,17 @@ if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 json = ['action', 'inviteReset', from]
 DogeXeonOP.query({json, expect200: true})
-reply('Successfully Reset Group Link')
+reply('تم حذف رابط القروب القديم')
 break
        case 'online':
        case 'onlinelist':
        case 'listonline':
-       case 'here':                
+       case 'متصل':                
              if (!isGroup) return reply(`Only group`)
              try {
              let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
              let online = [...Object.keys(DogeXeonOP.chats.get(ido).presences), DogeXeonOP.user.jid]
-             DogeXeonOP.sendMessage(from, 'List Online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, { quoted: mek, contextInfo: { mentionedJid: online }})
+             DogeXeonOP.sendMessage(from, 'قائمة المتصلين:\n' + online.map(v => '🟢 @' + v.replace(/@.+/, '')).join `\n`, text, { quoted: mek, contextInfo: { mentionedJid: online }})
              } catch (e) {
              reply(`${e}`)
 }
@@ -4698,10 +4694,10 @@ break
 					}
 					mentions(teks, members_id, true)
 					break
-case 'totag':
+case 'تاج':
 case 'sticktag':
 			if (!isGroup) return reply(mess.only.group)
-			if (!isGroupAdmins && !mek.key.fromMe) return reply('only admin and bot owner can use this feature')
+			if (!isGroupAdmins && !mek.key.fromMe) return reply('هذا الامر فقط للمشرفين')
             if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
             encmediau = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
             file = await DogeXeonOP.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
@@ -4813,11 +4809,11 @@ case 'sticktag':
           reply(`reply image/document/gif/sticker/audio/video with caption ${prefix}totag`)
         }
         break   
-case 'listadmin':
+case 'مشرفين':
 case 'adminlist':
 
 if (!isGroup) return reply(mess.only.group)
-teks = `Admin list of group *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
+teks = `قائمة مشرفي *${groupMetadata.subject}*\nعدد المشرفين  : ${groupAdmins.length}\n\n`
 no = 0
 for (let admon of groupAdmins) {
 no += 1
@@ -4825,12 +4821,12 @@ teks += `${no.toString()}. @${admon.split('@')[0]}\n`
 }
 mentions(teks, groupAdmins, true)
 break
-case 'ownergrup':
+case 'مؤسس':
 case 'ownergroup':
 
 if (!isGroup) return reply(mess.only.group)
 options = {
-text: `هذا هو مؤسس القروب : https://wa.me/${from.split("-")[0]}`,
+text: ` 🤴: https://wa.me/${from.split("-")[0]}`,
 contextInfo: { mentionedJid: [from] }
 }
 DogeXeonOP.sendMessage(from, options, text, { quoted: mek })
@@ -4848,7 +4844,7 @@ hidetagKontak(from, mentioned[0].split('@')[0], argzi[1])
 hidetagKontak(from, argzi[0], argzi[1])
 }
 break
-case 'contact':
+case 'رقم':
 
 if (!isGroup) return reply(mess.only.group)
 argzu = arg.split('|')
