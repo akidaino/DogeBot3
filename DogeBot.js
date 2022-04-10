@@ -503,8 +503,8 @@ for (let anji of setik){
             const checkId = getLevelingId(sender)
             try {
                 if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
-                const amountXp = Math.floor(Math.random() * 100) + 100
-                const requiredXp = 5000 * (Math.pow(2, currentLevel) - 1)
+                const amountXp = Math.floor(Math.random() * 1000) + 1000
+                const requiredXp = 500000 * (Math.pow(2, currentLevel) - 1)
                 var getLevel = getLevelingLevel(sender)
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
@@ -726,33 +726,30 @@ case 'groupmenu':
 menu =
 `*「 قائمة المجموعة 」*
 
-${gaya2} ${prefix}مضاد الروابط (antilink )
-${gaya2} ${prefix}مضاد الفرتكس (antivirtex)
-${gaya2} ${prefix}الترحيب (welcome )
-${gaya2} ${prefix}فتح /اغلاء 
-${gaya2} ${prefix}ترقية
-${gaya2} ${prefix}تخفيض 
-${gaya2} ${prefix}دخل
-${gaya2} ${prefix}طرد 
-${gaya2} ${prefix}وصف (قرائة وصف لقروب) 
-${gaya2} ${prefix}صورة( تغيير صورة قروب)
-${gaya2} ${prefix}وصفف (تغيير وصف لقروب)
-${gaya2} ${prefix}اسم (تغيير اسم القروب)
-${gaya2} ${prefix}ملصق
-${gaya2} ${prefix}فعالية
-${gaya2} ${prefix}رقم
-${gaya2} ${prefix}تاج (منشن بصورة )
-${gaya2} ${prefix}تاج (منشن بملصق )
-${gaya2} ${prefix}انشاء قروب (creategroup)
-${gaya2} ${prefix}ترقية الكل (promoteall)
-${gaya2} ${prefix}تخفيض الكل (demoteall)
-${gaya2} ${prefix}مشرفين
-${gaya2} ${prefix}اطلع ( اخراج البوت)
-${gaya2} ${prefix}مؤسس
-${gaya2} ${prefix}قروب
-${gaya2} ${prefix}رابط  
-${gaya2} ${prefix}متصل ( اعضاء اونلاين)
-${gaya2} ${prefix}اعادة (حذف رابط قروب)`
+${gaya2} ${prefix}منشن ⇉ اعضاء القروب
+${gaya2} ${prefix}دخل ⇉ ادخال رقم
+${gaya2} ${prefix}طرد ⇉طرد عضو
+${gaya2} ${prefix}ترقية ⇉ الترقية لمشرف
+${gaya2} ${prefix}تخفيض ⇉خفض لعضو
+${gaya2} ${prefix}فعالية ⇉ارسلها مع استمارة
+${gaya2} ${prefix}فتح /اغلاء ⇉فتح قروب
+${gaya2} ${prefix}وصف ⇉ قرائة وصف قروب
+${gaya2} ${prefix}وصفف ⇉تغيير وصف قروب
+${gaya2} ${prefix}صورة ⇉تغيير صورة قروب
+${gaya2} ${prefix}اسم ⇉تغيير اسم قروب
+${gaya2} ${prefix}تاج ⇉منشن بملصق او صورة
+${gaya2} ${prefix}قروب ⇉معلومات قروب
+${gaya2} ${prefix}مؤسس ⇉مؤسس لقروب
+${gaya2} ${prefix}متصل ⇉اعضاء اونلاين
+${gaya2} ${prefix}مشرفين ⇉قائمة مسؤولين
+${gaya2} ${prefix}اطلع ⇉طرد البوت من قروب
+${gaya2} ${prefix}رابط ⇉جلب رابط قروب
+${gaya2} ${prefix}ااعادة حذف رابط قروب
+${gaya2} ${prefix}رقم ⇉انشار رقم
+${gaya2} ${prefix}انشاء ⇉انشاء قروب 
+${gaya2} ${prefix}مضاد روابط ⇉تفعيل/تعطيل
+${gaya2} ${prefix}مضاد فرتكس ⇉تفعيل/تعطيل
+${gaya2} ${prefix}ترحيب ⇉تفعيل/تعطيل`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: '⬅️ ارجع' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: '👤 المطور' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
@@ -3677,7 +3674,7 @@ case 'rate':
 					break
          			  case 'هل':
 					apakah = body.slice(1)
-					const apa =['نعم','لا','اسال ثالث منشن','شرايك انت ؟','اذلف مدري 🗿','هو شوف على حسب 🐧','يمكن','مدري صراحة','اتوقعععع يب 🐧🤣']
+					const apa =['نعم','لا','شرايك انت ؟','اذلف مدري 🗿','هو شوف على حسب 🐧','يمكن','مدري صراحة','اتوقعععع يب 🐧🤣']
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 					DogeXeonOP.sendMessage(from, 'السؤال : *'+apakah+'*\n\nالجواب : '+ kah, text, { quoted: mek })
 					break
@@ -3874,7 +3871,7 @@ watak = body.slice(1)
 ]
               const der = dare[Math.floor(Math.random() * dare.length)]
               buffer = await getBuffer(`https://i.ibb.co/17Gzvp9/Pics-Art-04-09-03-30-04.jpg`)
-              DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*DARE*_\n'+ der })
+              DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*جرأة*_\n'+ der })
               break
                             break
        case 'حقيقة':
@@ -3971,7 +3968,7 @@ watak = body.slice(1)
 ]
               const trut = truth[Math.floor(Math.random() * truth.length)]
               buffer = await getBuffer(`https://i.ibb.co/17Gzvp9/Pics-Art-04-09-03-30-04.jpg`)
-              DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*TRUTH*_\n'+ trut })
+              DogeXeonOP.sendMessage(from, buffer, image, { quoted: mek, caption: '_*حقيقة*_\n'+ trut })
               break
               
 //══════════[ OWNER FEATURES ]══════════//
@@ -4313,7 +4310,7 @@ if (Number(oi2) >= 50) return reply('Max 50!')
 //══════════[ GROUP FEATURES ]══════════//
 
                    case 'creategroup':
-			case 'creategrup':
+			case 'انشاء':
 			if (!isGroup) return reply(mess.only.group)
 				if (args.length < 1) return reply(`Use ${prefix}creategrup group name|@tag member`)
 				argz = arg.split('|')
@@ -4327,7 +4324,7 @@ if (Number(oi2) >= 50) return reply('Max 50!')
 					reply(`تم✓انشاء قروب ${argz[0]}`)
                 }
 				break
-case 'getbio':
+case 'وصف':
 	  var yy = mek.message.extendedTextMessage.contextInfo.participant
 var p = await DogeXeonOP.getStatus(`${yy}`, MessageType.text)
 reply(p.status)
@@ -4385,21 +4382,21 @@ reply(`\`\`\`تم✓✅, Disabling the nsfw feature in the group\`\`\` *${groupM
 reply('*on to enable, off to disable*')
 }
 break
-case 'welcome':
+case 'ترحيب':
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
-if (args.length < 1) return reply(`Type :\n${prefix}welcome on to activate\n${prefix}welcome off to disable`)
-if ((args[0]) === 'on') {
-if (isWelkom) return reply('*welcome is active !!*')
+if (args.length < 1) return reply(`اكتب :\n${prefix}ترحيب\n${prefix}لتفعيله او تعطيله`)
+if ((args[0]) === 'تفعيل') {
+if (isWelkom) return reply('*الترحيب مفعل مسبقا*')
 _welkom.push(from)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`تم✓✅, Activating the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
-} else if ((args[0]) === 'off') {
-if (!isWelkom) return reply('*welcome has been off before !!*')
+reply(`\`\`\`تم✓✅, تفعيل الترحيب فالمجموعة\`\`\` *${groupMetadata.subject}*`)
+} else if ((args[0]) === 'تعطيل') {
+if (!isWelkom) return reply('*الترحيب معطل مسبقا*')
 _welkom.splice(from, 1)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`تم✓✅, Disabling the welcome feature in the group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`تم✓✅, تعطيل الترحيب فالمجموعة\`\`\` *${groupMetadata.subject}*`)
 } else {
 reply('*on to enable, off to disable*')
 }
@@ -4409,13 +4406,13 @@ case 'antilink':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (!q) return reply(`Choose on or off`)
-if (args[0].toLowerCase() === 'on'){
-if (isAntiLink) return reply(`Already active`)
+if (!q) return reply(`اختر تفعيل ام تعطيل`)
+if (args[0].toLowerCase() === 'تفعيل'){
+if (isAntiLink) return reply(`مفعل مسبقا`)
 _antilink.push(from)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
 reply(`\`\`\`تم✓ ✅, تفعيل مضاد الروابط فالمجموعة\`\`\` *${groupMetadata.subject}*`)
-} else if (args[0].toLowerCase() === 'off'){
+} else if (args[0].toLowerCase() === 'تعطيل'){
 let anuantilink = _antilink.indexOf(from)
 _antilink.splice(anuantilink, 1)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
@@ -4429,13 +4426,13 @@ case 'antivirtex':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (!q) return reply(`Choose on or off`)
-if (args[0].toLowerCase() === 'on'){
-if (isAntiVirtex) return reply(`Already active`)
+if (!q) return reply(`اختر تفعيل ام تعطيل`)
+if (args[0].toLowerCase() === 'تفعيل'){
+if (isAntiVirtex) return reply(`مفعل مسبقا`)
 _antivirtex.push(from)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
 reply(`\`\`\`تم✓✅, Activating the antivirtex feature in the group\`\`\` *${groupMetadata.subject}*`)
-} else if (args[0].toLowerCase() === 'off'){
+} else if (args[0].toLowerCase() === 'تعطيل'){
 let anuantivtex = _antivirtex.indexOf(from)
 _antivirtex.splice(anuantivtex, 1)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
@@ -4649,7 +4646,7 @@ var pic = await DogeXeonOP.getProfilePicture(from)
 } catch {
 var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 }
-let ingfo = `*معلومات القروب*\n\n*الاسم :* ${groupName}\n*ايدي قروب :* ${from}\n*وقت انشائه :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n*مؤسس المجموعه :* @${groupMetadata.owner.split('@')[0]}\n*عدد المشرفين :* ${groupAdmins.length}\n*عدد الاعضاء :* ${groupMembers.length}\n*الترحيب :* ${isWelkom ? 'Aktif' : 'Mati'}\n*مضاد الروابط :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*ديسك :* \n\n${groupMetadata.desc}`
+let ingfo = `*معلومات القروب*\n\n*الاسم :* ${groupName}\n*وقت انشائه :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n*مؤسس المجموعه :* @${groupMetadata.owner.split('@')[0]}\n*عدد المشرفين :* ${groupAdmins.length}\n*عدد الاعضاء :* ${groupMembers.length}\n*الترحيب :* ${isWelkom ? 'Aktif' : 'Mati'}\n*مضاد الروابط :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*ديسك :* \n\n${groupMetadata.desc}`
 DogeXeonOP.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
 break
 case 'resetlinkgc':
@@ -4826,7 +4823,7 @@ case 'ownergroup':
 
 if (!isGroup) return reply(mess.only.group)
 options = {
-text: ` 🤴: https://wa.me/${from.split("-")[0]}`,
+text: ` 🤴: https://wa.me/.split("-")[0]}`,
 contextInfo: { mentionedJid: [from] }
 }
 DogeXeonOP.sendMessage(from, options, text, { quoted: mek })
